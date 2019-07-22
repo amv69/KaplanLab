@@ -9,22 +9,32 @@ print("Ensure you are in prefered conda environment containing these tools:\n ba
 #Wait command to ensure program will work correctly with given environment
 wait = input("Press Enter to Continue or Ctrl+C to Exit")
 
-
+""" Used for Command line arguments instead of typing arguments as you go
 if(len(sys.argv) < 1): #Ensure that a path was given and if not alert user then exit
 	print("Enter Absolute Path to reads after command")
 	exit()
 
 if(len(sys.argv) < 2):
 	print("Enter absolute path to the genome after the reads location")
-
+"""
 
 #Setting up the given path to the reads
-path = sys.argv[1]
-genome = sys.argv[2]
-
-if(os.path.exists(path) != True): #Checking to see if the path exists and if not then alert and exit
-	print("Enter Absolute path to reads after command")
-	exit()
+path = "~"
+while(True):
+	path = input("Please enter absolute path to reads")
+	if(os.path.exists(path) != True): #Checking to see if the path exists and if not then alert and exit
+		print("Path does not exist")
+		continue
+	else:
+		break
+genome = "~"
+while(True):
+	genome = input("please enter absolute path to genome file")
+	if(os.path.exists(genome) != True): #Checking to see if the path exists and if not then alert and exit
+		print("Path does not exist")
+		continue
+	else:
+		break
 
 #Get current working directory so we can return
 wd = os.getcwd()
