@@ -14,8 +14,13 @@ if(len(sys.argv) < 1): #Ensure that a path was given and if not alert user then 
 	print("Enter Absolute Path to reads after command")
 	exit()
 
+if(len(sys.argv) < 2):
+	print("Enter absolute path to the genome after the reads location")
+
+
 #Setting up the given path to the reads
 path = sys.argv[1]
+genome = sys.argv[2]
 
 if(os.path.exists(path) != True): #Checking to see if the path exists and if not then alert and exit
 	print("Enter Absolute path to reads after command")
@@ -79,7 +84,7 @@ subprocess.check_call("for file in *sorted.bam; do echo $file && samtools idxsta
 subprocess.check_call("for file in *_unique_sorted_mt.bam; do echo $file && bedtools bamtobed -cigar -i $file > ${file/_unique_sorted_mt.bam/.bed}; done", shell=True)
 
 #Get genomecoverage for bed files
-subprocess.check_call('for str in "+" "-"; do [ "$str" = "+" ] && n="rev" || n="fw"; for file in *.bed; do sample=${file} && echo $n $sample && bedtools genomecov -g /bgfs/ckaplan/Anand_seq/Genomes/Combined_yeast/Budding_Fission_new.genome -i $file -bg -5 -strand $str > ${sample}_${n}.bg; done; done', shell=True)
+subprocess.check_call('for str in "+" "-"; do [ "$str" = "+" ] && n="rev" || n="fw"; for file in *.bed; do sample=${file} && echo $n $sample && bedtools genomecov -g ' + genome + ' -i $file -bg -5 -strand $str > ${sample}_${n}.bg; done; done', shell=True)
 
 #Function to generate full BedGraph files that we want, There are Triple Strings to deliminate file 
 subprocess.check_call("""f_str="fw"; r_str="rev"; ext=".bg"; for file1 in *${f_str}${ext}; do file2=${file1/${f_str}/${r_str}} && outfile=${file1/${f_str}${ext}/fw_rev.bedgraph} && echo $file1 "+" $file2 "=" $outfile && awk 'BEGIN{OFS="\t"}{print $1,$2,$3,"-"$4}' $file2 | cat $file1 - | sort -k1,1 -k2,2n > $outfile; done""", shell=True)
@@ -97,7 +102,7 @@ subprocess.check_call("for file in *sorted.bedgraph; do echo $file && bedtools m
 subprocess.check_call("for file in *merged.bedgraph; do echo $file && LC_COLLATE=C sort -k1,1 -k2,2n -k3,3n -s  $file > ${file/.bedgraph/_sorted2.bedgraph}; done", shell=True)
 
 #Conversion to BigWIg
-subprocess.check_call("for file in *sorted2.bedgraph; do echo $file && bedGraphToBigWig $file /bgfs/ckaplan/Anand_seq/Genomes/Combined_yeast/Budding_Fission_new.genome $file.bw; done", shell=True)
+subprocess.check_call("for file in *sorted2.bedgraph; do echo $file && bedGraphToBigWig $file " + genome + " $file.bw; done", shell=True)
 
 
 #Returns to the original working directory
