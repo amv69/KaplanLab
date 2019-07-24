@@ -9,7 +9,8 @@ print("Ensure you are in prefered conda environment containing these tools:\n ba
 #Wait command to ensure program will work correctly with given environment
 wait = input("Press Enter to Continue or Ctrl+C to Exit")
 
-""" Used for Command line arguments instead of typing arguments as you go
+""" Used for Command line arguments instead of typing arguments as you go (Old?)
+
 if(len(sys.argv) < 1): #Ensure that a path was given and if not alert user then exit
 	print("Enter Absolute Path to reads after command")
 	exit()
@@ -36,6 +37,12 @@ while(True):
 	else:
 		break
 
+hisatFile = "~"#Genome file to index if there isn't an indexed genome (Where to save)
+hisatIndexed = "~" #Does user already have an indxed genome?
+spliceSites = "~" #Have outside known splice sites or do them in file?
+
+#Main goal is to put flags and switches into terms that are understandable
+
 #Get current working directory so we can return
 wd = os.getcwd()
 
@@ -61,7 +68,7 @@ shell = True - Makes subprocesses run in the shell
 """
 #The fastqc calls for R1 & R2
 subprocess.check_call("fastqc -o ./fastqc_pretrim/ *_R1.fastq", shell = True)
-subprocess.check_call("fastqc -o ./fastqc_pretrim/ *_R2.fastq",shell = True)
+subprocess.check_call("fastqc -o ./fastqc_pretrim/ *_R2.fastq", shell = True)
 
 #Cutadapt call for all R1 & R2 in current directory
 subprocess.check_call("for f1 in *R1.fastq; do f2=${f1/R1/R2} && echo $f1 $f2; cutadapt -g XT{50} -A A{50}X -O 5 -o ${f1/.fastq/_cutadapt.fastq} -p ${f2/.fastq/_cutadapt.fastq} ${f1} ${f2} > ${f1/.fastq/cutadapt.txt}; done", shell = True)
