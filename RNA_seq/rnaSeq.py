@@ -21,6 +21,13 @@ if(len(sys.argv) < 2):
 
 #Setting up the given path to the reads
 path = "~"
+adaptThree = "~"
+adaptFive = "~"
+genome = "~"
+hisatFile = "~"
+spliceSites = "~" 
+cut = "3"
+
 while(True):
 	path = input("Please enter absolute path to reads")
 	if(os.path.exists(path) != True): #Checking to see if the path exists and if not then alert and exit
@@ -28,20 +35,66 @@ while(True):
 		continue
 	else:
 		break
-genome = "~"
+
 while(True):
-	genome = input("please enter absolute path to genome file")
+	genome = input("Please enter absolute path to genome file")
 	if(os.path.exists(genome) != True): #Checking to see if the path exists and if not then alert and exit
 		print("Path does not exist")
 		continue
 	else:
 		break
 
-hisatFile = "~"#Genome file to index if there isn't an indexed genome (Where to save)
-hisatIndexed = "~" #Does user already have an indxed genome?
-spliceSites = "~" #Have outside known splice sites or do them in file?
+while(True):
+	hasIndex = input("Do you already have an indexed hisat file? (yes/no)")
+	if(hasIndex.lower() != 'yes' or toIndex.lower() != 'no'):
+		print('Please enter yes or no')
+		continue
+	else:
+		break
 
-#Main goal is to put flags and switches into terms that are understandable
+#Genome file to index if there isn't an indexed genome
+if(hasIndex = 'no'):
+	while(True):
+		hisatFile = input("Please enter absolute path to FastA file to index")
+		if(os.path.exists(hisatFile) != True): #Checking to see if the path exists and if not then alert and exit
+			print("Path does not exist")
+			continue
+		else:
+			break
+
+#Have outside known splice sites or do them in file?
+while(True):
+	spliceSites = input("please enter absolute path to known splice sites \n NOTE:If not needed type none")
+	if(splceSites.lower() == "none"):
+		break
+	if(os.path.exists(hisatFile) != True): #Checking to see if the path exists and if not then alert and exit
+		print("Path does not exist")
+		continue
+	else:
+		break
+
+#Options for trimming 
+while(True):
+	print("Please Enter an option (1, 2 or 3)")
+	print("1: Remove poly-A tails")
+	print("2: Enter custom adapters to remove")
+	print("3: Skip trimming")
+	cut = input()
+	if(cut != 1 or cut != 2 or cut != 3):
+		print("Please enter 1, 2, or 3")
+		continue
+
+if(cut == 2):
+	
+	while(True):
+		adaptThree = input("Please enter 3 prime primer to remove")
+		if(adaptThree.lower() == "none"):
+			break
+
+	while(True):
+		adaptFive = input("Please enter 5 prime primer to remove")
+		if(adaptFive.lower() == "none"):
+			break
 
 #Get current working directory so we can return
 wd = os.getcwd()
@@ -70,8 +123,9 @@ shell = True - Makes subprocesses run in the shell
 subprocess.check_call("fastqc -o ./fastqc_pretrim/ *_R1.fastq", shell = True)
 subprocess.check_call("fastqc -o ./fastqc_pretrim/ *_R2.fastq", shell = True)
 
-#Cutadapt call for all R1 & R2 in current directory
-subprocess.check_call("for f1 in *R1.fastq; do f2=${f1/R1/R2} && echo $f1 $f2; cutadapt -g XT{50} -A A{50}X -O 5 -o ${f1/.fastq/_cutadapt.fastq} -p ${f2/.fastq/_cutadapt.fastq} ${f1} ${f2} > ${f1/.fastq/cutadapt.txt}; done", shell = True)
+if(cut == 1):
+	#Cutadapt call for all R1 & R2 in current directory
+	subprocess.check_call("for f1 in *R1.fastq; do f2=${f1/R1/R2} && echo $f1 $f2; cutadapt -g XT{50} -A A{50}X -O 5 -o ${f1/.fastq/_cutadapt.fastq} -p ${f2/.fastq/_cutadapt.fastq} ${f1} ${f2} > ${f1/.fastq/cutadapt.txt}; done", shell = True)
 
 """
 The HISAT2 aligner is used here with fixed directories given for splicesites, the indexed genome and the output.
@@ -124,6 +178,11 @@ subprocess.check_call("for file in *sorted2.bedgraph; do echo $file && bedGraphT
 
 #Returns to the original working directory
 os.chdir(wd)
+
+
+
+
+
 
 
 
