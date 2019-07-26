@@ -4,6 +4,7 @@ import subprocess
 
 #Print statement to ensure that Conda environment has been activated or modules could be loaded with the script if a Job
 #TO-DO Get versioning from conda/modules of all of the programs 
+print("NOTE: This pipeline relies on reads being stored as *R1/R2 .fq (TO DO: add custom files)")
 print("Ensure you are in prefered conda environment containing these tools:\n bamutil \n cutadapt \n samtools \n hisat2 \n fastx_toolkit \n bowtie2 \n bowtie \n sra-tools \n deeptools \n ucsc-bedgraphtobigwig \n debops \n fastqc \n ucsc-fetchchromsizes ")
 
 #Wait command to ensure program will work correctly with given environment
@@ -26,7 +27,7 @@ adaptFive = "~"
 genome = "~"
 hisatFile = "~"
 spliceSites = "~" 
-cut = "3"
+cut = "0"
 
 while(True):
 	path = input("Please enter absolute path to reads")
@@ -36,8 +37,14 @@ while(True):
 	else:
 		break
 
+#Get current working directory so we can return
+wd = os.getcwd()
+
+#Move Working Directory to one specified with command line argument
+os.chdir(path)
+
 while(True):
-	genome = input("Please enter absolute path to genome file")
+	genome = input("Please enter absolute path to genome (FastA) file")
 	if(os.path.exists(genome) != True): #Checking to see if the path exists and if not then alert and exit
 		print("Path does not exist")
 		continue
@@ -54,24 +61,38 @@ while(True):
 
 #Genome file to index if there isn't an indexed genome
 if(hasIndex = 'no'):
+	hisatFile = input("Please enter index prefix")
+		"""if(os.path.exists(hisatFile) != True): #Checking to see if the path exists and if not then alert and exit
+			print("Path does not exist")
+			continue """
+	subprocess.check_call("hisat2-build " + genome + " " + hisatFile)
+else:
 	while(True):
-		hisatFile = input("Please enter absolute path to FastA file to index")
+		hisatFile = input("Please enter absolute path to index prefix")
+		if(os.path.exists(hisatFile) != True): #Checking to see if the path exists and if not then alert and exit
+			print("Path does not exist")
+			continue 
+			
+
+#Have outside known splice sites or do them in file?
+while(True):
+	splice = input("Do you have a known splice site file? (yes/no)")
+	if(splice.lower() != 'yes' or splice.lower() != 'no'):
+		print('Please enter yes or no')
+		continue
+	else:
+		break
+
+if(splice == "yes"):
+	while(True):
+		spliceSites = input("Please enter absolute path to known splice sites \n NOTE:If not needed type none")
+		if(splceSites.lower() == "none"):
+			break
 		if(os.path.exists(hisatFile) != True): #Checking to see if the path exists and if not then alert and exit
 			print("Path does not exist")
 			continue
 		else:
 			break
-
-#Have outside known splice sites or do them in file?
-while(True):
-	spliceSites = input("please enter absolute path to known splice sites \n NOTE:If not needed type none")
-	if(splceSites.lower() == "none"):
-		break
-	if(os.path.exists(hisatFile) != True): #Checking to see if the path exists and if not then alert and exit
-		print("Path does not exist")
-		continue
-	else:
-		break
 
 #Options for trimming 
 while(True):
@@ -85,22 +106,10 @@ while(True):
 		continue
 
 if(cut == 2):
-	
-	while(True):
-		adaptThree = input("Please enter 3 prime primer to remove")
-		if(adaptThree.lower() == "none"):
-			break
+	adaptThree = input("Please enter 3 prime Adapter to remove")
+	adaptFive = input("Please enter 5 prime Adapter to remove")
 
-	while(True):
-		adaptFive = input("Please enter 5 prime primer to remove")
-		if(adaptFive.lower() == "none"):
-			break
 
-#Get current working directory so we can return
-wd = os.getcwd()
-
-#Move Working Directory to one specified with command line argument
-os.chdir(path)
 
 #File path needed for fastqc, ensures that it exists and if not creates it
 if(os.path.exists(path + "/fastqc_pretrim") != True):
@@ -124,8 +133,11 @@ subprocess.check_call("fastqc -o ./fastqc_pretrim/ *_R1.fastq", shell = True)
 subprocess.check_call("fastqc -o ./fastqc_pretrim/ *_R2.fastq", shell = True)
 
 if(cut == 1):
-	#Cutadapt call for all R1 & R2 in current directory
+	#Cutadapt call for all R1 & R2 in current directory for poly-A tails
 	subprocess.check_call("for f1 in *R1.fastq; do f2=${f1/R1/R2} && echo $f1 $f2; cutadapt -g XT{50} -A A{50}X -O 5 -o ${f1/.fastq/_cutadapt.fastq} -p ${f2/.fastq/_cutadapt.fastq} ${f1} ${f2} > ${f1/.fastq/cutadapt.txt}; done", shell = True)
+elif(cut==2):
+	#Cutadpat call for supplied adapters
+	subprocess.check_call("for f1 in *R1.fastq; do f2=${f1/R1/R2} && echo $f1 $f2 cutadapt -a " + adaptThree + "X -g X" + adaptFive + "-O 5 -o ${f1/.fastq/_cutadapt.fastq} -p ${f2/.fastq/_cutadapt.fastq} ${f1} ${f2} > ${f1/.fastq/cutadapt.txt}; done", shell = True)
 
 """
 The HISAT2 aligner is used here with fixed directories given for splicesites, the indexed genome and the output.
@@ -133,7 +145,11 @@ The HISAT2 aligner is used here with fixed directories given for splicesites, th
 This can be updated to include inputable splicesites lcoation, genome (indexed or not) and change output dir
 
 """
-subprocess.check_call("for f1 in *R1_cutadapt.fastq; do f2=${f1/R1/R2} && echo $f1 $f2 && hisat2 -q --phred33 --max-intronlen 4000 --known-splicesite-infile --no-unal /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/spo_sce_index/spo_sce_splicesites_chr.txt --rna-strandness RF --secondary --no-mixed --summary-file ${f1/R1_cutadapt.fastq/hs2.txt} -x /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/spo_sce_index/ht2_spo_sce_index -1 ${f1} -2 ${f2} -S ${f1/R1_cutadapt.fastq/hs2.sam}; done", shell=True)
+if(splice == 'yes'):
+	subprocess.check_call("for f1 in *R1_cutadapt.fastq; do f2=${f1/R1/R2} && echo $f1 $f2 && hisat2 -q --phred33 --max-intronlen 4000 --known-splicesite-infile --no-unal " + splceSites + " --rna-strandness RF --secondary --no-mixed --summary-file ${f1/R1_cutadapt.fastq/hs2.txt} -x " + hisatFile + " -1 ${f1} -2 ${f2} -S ${f1/R1_cutadapt.fastq/hs2.sam}; done", shell=True)
+
+if(splice == 'no'):
+	subprocess.check_call("for f1 in *R1_cutadapt.fastq; do f2=${f1/R1/R2} && echo $f1 $f2 && hisat2 -q --phred33 --max-intronlen 4000 --rna-strandness RF --secondary --no-mixed --summary-file ${f1/R1_cutadapt.fastq/hs2.txt} -x " + hisatFile + " -1 ${f1} -2 ${f2} -S ${f1/R1_cutadapt.fastq/hs2.sam}; done", shell=True)
 
 #Call to convert SAM to BAM(-b) TO-DO: -S has been deprecated, make sure it works w/o
 subprocess.check_call("for file in *hs2.sam; do echo $file && samtools view -S -b ${file} > ${file/sam/bam}; done", shell=True)
