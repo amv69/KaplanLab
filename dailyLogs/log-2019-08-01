@@ -1,0 +1,145 @@
+Script started on Thu 01 Aug 2019 09:28:45 AM EDT
+]0;amv69@login0b:~[?1034h(base) [amv69@n410 ~]$ python rnaSeq.py fasta/[K[K[K[K[K[K~/fasta
+Ensure you are in prefered conda environment containing these tools:
+ bamutil 
+ cutadapt 
+ samtools 
+ hisat2 
+ fastx_toolkit 
+ bowtie2 
+ bowtie 
+ sra-tools 
+ deeptools 
+ ucsc-bedgraphtobigwig 
+ debops 
+ fastqc 
+ ucsc-fetchchromsizes 
+Press Enter to Continue or Ctrl+C to Exit
+/bin/sh: fastqc: command not found
+Traceback (most recent call last):
+  File "rnaSeq.py", line 48, in <module>
+    subprocess.check_call("fastqc -o ./fastqc_pretrim/ *_R1.fastq", shell = True)
+  File "/ihome/ckaplan/amv69/miniconda3/lib/python3.7/subprocess.py", line 347, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command 'fastqc -o ./fastqc_pretrim/ *_R1.fastq' returned non-zero exit status 127.
+]0;amv69@login0b:~(base) [amv69@n410 ~]$ cd f[Kfasta/
+]0;amv69@login0b:~/fasta(base) [amv69@n410 fasta]$ cd fasta/[Kcd fasta/python rnaSeq.py ~/fasta[K[Kta/
+python: can't open file 'rnaSeq.py': [Errno 2] No such file or directory
+]0;amv69@login0b:~/fasta(base) [amv69@n410 fasta]$ python rnaSeq.py ~/fasta/\[K[K
+python: can't open file 'rnaSeq.py': [Errno 2] No such file or directory
+]0;amv69@login0b:~/fasta(base) [amv69@n410 fasta]$ ls
+9_CKY3284_WT_C2_R1.fastq  9_CKY3284_WT_C2_R2.fastq  [0m[01;34mfastqc_pretrim[0m
+]0;amv69@login0b:~/fasta(base) [amv69@n410 fasta]$ lspython rnaSeq.py ~/fastals[Kpython rnaSeq.py ~/fasta[K[K[K[K[K[K[K.
+python: can't open file 'rnaSeq.py': [Errno 2] No such file or directory
+]0;amv69@login0b:~/fasta(base) [amv69@n410 fasta]$ python rnaSeq.py .[1@~[1@/
+Ensure you are in prefered conda environment containing these tools:
+ bamutil 
+ cutadapt 
+ samtools 
+ hisat2 
+ fastx_toolkit 
+ bowtie2 
+ bowtie 
+ sra-tools 
+ deeptools 
+ ucsc-bedgraphtobigwig 
+ debops 
+ fastqc 
+ ucsc-fetchchromsizes 
+Press Enter to Continue or Ctrl+C to Exit
+/bin/sh: fastqc: command not found
+Traceback (most recent call last):
+  File "/ihome/ckaplan/amv69/rnaSeq.py", line 48, in <module>
+    subprocess.check_call("fastqc -o ./fastqc_pretrim/ *_R1.fastq", shell = True)
+  File "/ihome/ckaplan/amv69/miniconda3/lib/python3.7/subprocess.py", line 347, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command 'fastqc -o ./fastqc_pretrim/ *_R1.fastq' returned non-zero exit status 127.
+]0;amv69@login0b:~/fasta(base) [amv69@n410 fasta]$ ls
+9_CKY3284_WT_C2_R1.fastq  9_CKY3284_WT_C2_R2.fastq  [0m[01;34mfastqc_pretrim[0m
+]0;amv69@login0b:~/fasta(base) [amv69@n410 fasta]$ rm fastqc_pretrim/-fastqc_pretrim/rfastqc_pretrim/ fastqc_pretrim/
+]0;amv69@login0b:~/fasta(base) [amv69@n410 fasta]$ rm -r fastqc_pretrim/ls[Kpython ~/rnaSeq.py .[2P[C[C[C[C[C[C[C[C[C[C[C[2@~/[C[C[C[C[C[C[C[C[C[C[C
+Ensure you are in prefered conda environment containing these tools:
+ bamutil 
+ cutadapt 
+ samtools 
+ hisat2 
+ fastx_toolkit 
+ bowtie2 
+ bowtie 
+ sra-tools 
+ deeptools 
+ ucsc-bedgraphtobigwig 
+ debops 
+ fastqc 
+ ucsc-fetchchromsizes 
+Press Enter to Continue or Ctrl+C to Exit
+/bin/sh: fastqc: command not found
+Traceback (most recent call last):
+  File "/ihome/ckaplan/amv69/rnaSeq.py", line 48, in <module>
+    subprocess.check_call("fastqc -o ./fastqc_pretrim/ *_R1.fastq", shell = True)
+  File "/ihome/ckaplan/amv69/miniconda3/lib/python3.7/subprocess.py", line 347, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command 'fastqc -o ./fastqc_pretrim/ *_R1.fastq' returned non-zero exit status 127.
+]0;amv69@login0b:~/fasta(base) [amv69@n410 fasta]$ fastqc
+bash: fastqc: command not found
+]0;amv69@login0b:~/fasta(base) [amv69@n410 fasta]$ conda activate rnaseq
+]0;amv69@login0b:~/fasta(rnaseq) [amv69@n410 fasta]$ conda activate rnaseqfastqc[Kpython ~/rnaSeq.py .rm -r fastqc_pretrim/[1Ppython ~/rnaSeq.py .
+Ensure you are in prefered conda environment containing these tools:
+ bamutil 
+ cutadapt 
+ samtools 
+ hisat2 
+ fastx_toolkit 
+ bowtie2 
+ bowtie 
+ sra-tools 
+ deeptools 
+ ucsc-bedgraphtobigwig 
+ debops 
+ fastqc 
+ ucsc-fetchchromsizes 
+Press Enter to Continue or Ctrl+C to Exit
+Started analysis of 9_CKY3284_WT_C2_R1.fastq
+Approx 5% complete for 9_CKY3284_WT_C2_R1.fastq
+Approx 10% complete for 9_CKY3284_WT_C2_R1.fastq
+Approx 15% complete for 9_CKY3284_WT_C2_R1.fastq
+Approx 20% complete for 9_CKY3284_WT_C2_R1.fastq
+Approx 25% complete for 9_CKY3284_WT_C2_R1.fastq
+Approx 30% complete for 9_CKY3284_WT_C2_R1.fastq
+Approx 35% complete for 9_CKY3284_WT_C2_R1.fastq
+Approx 40% complete for 9_CKY3284_WT_C2_R1.fastq
+Approx 45% complete for 9_CKY3284_WT_C2_R1.fastq
+Approx 50% complete for 9_CKY3284_WT_C2_R1.fastq
+Approx 55% complete for 9_CKY3284_WT_C2_R1.fastq
+Approx 60% complete for 9_CKY3284_WT_C2_R1.fastq
+Approx 65% complete for 9_CKY3284_WT_C2_R1.fastq
+Approx 70% complete for 9_CKY3284_WT_C2_R1.fastq
+Approx 75% complete for 9_CKY3284_WT_C2_R1.fastq
+Approx 80% complete for 9_CKY3284_WT_C2_R1.fastq
+Approx 85% complete for 9_CKY3284_WT_C2_R1.fastq
+Approx 90% complete for 9_CKY3284_WT_C2_R1.fastq
+Approx 95% complete for 9_CKY3284_WT_C2_R1.fastq
+Analysis complete for 9_CKY3284_WT_C2_R1.fastq
+Started analysis of 9_CKY3284_WT_C2_R2.fastq
+Approx 5% complete for 9_CKY3284_WT_C2_R2.fastq
+Approx 10% complete for 9_CKY3284_WT_C2_R2.fastq
+Approx 15% complete for 9_CKY3284_WT_C2_R2.fastq
+Approx 20% complete for 9_CKY3284_WT_C2_R2.fastq
+Approx 25% complete for 9_CKY3284_WT_C2_R2.fastq
+Approx 30% complete for 9_CKY3284_WT_C2_R2.fastq
+Approx 35% complete for 9_CKY3284_WT_C2_R2.fastq
+Approx 40% complete for 9_CKY3284_WT_C2_R2.fastq
+Approx 45% complete for 9_CKY3284_WT_C2_R2.fastq
+Approx 50% complete for 9_CKY3284_WT_C2_R2.fastq
+Approx 55% complete for 9_CKY3284_WT_C2_R2.fastq
+Approx 60% complete for 9_CKY3284_WT_C2_R2.fastq
+Approx 65% complete for 9_CKY3284_WT_C2_R2.fastq
+Approx 70% complete for 9_CKY3284_WT_C2_R2.fastq
+Approx 75% complete for 9_CKY3284_WT_C2_R2.fastq
+Approx 80% complete for 9_CKY3284_WT_C2_R2.fastq
+Approx 85% complete for 9_CKY3284_WT_C2_R2.fastq
+Approx 90% complete for 9_CKY3284_WT_C2_R2.fastq
+Approx 95% complete for 9_CKY3284_WT_C2_R2.fastq
+Analysis complete for 9_CKY3284_WT_C2_R2.fastq
+9_CKY3284_WT_C2_R1.fastq 9_CKY3284_WT_C2_R2.fastq
+[8<----------] 00:00:01        70,000 reads  @     14.7 µs/read;   4.09 M reads/minute[8=----------] 00:00:02       140,000 reads  @     14.6 µs/read;   4.10 M reads/minute[ 8<---------] 00:00:03       210,000 reads  @     14.7 µs/read;   4.09 M reads/minute[ 8=---------] 00:00:04       280,000 reads  @     15.1 µs/read;   3.96 M reads/minute[  8<--------] 00:00:05       350,000 reads  @     14.8 µs/read;   4.05 M reads/minute[  8=--------] 00:00:06       420,000 reads  @     14.6 µs/read;   4.10 M reads/minute[   8<-------] 00:00:07       490,000 reads  @     14.6 µs/read;   4.10 M reads/minute[   8=-------] 00:00:08       560,000 reads  @     14.8 µs/read;   4.06 M reads/minute[    8<------] 00:00:09       610,000 reads  @     20.2 µs/read;   2.98 M reads/minute[    8=------] 00:00:10       680,000 reads  @     14.7 µs/read;   4.08 M reads/minute[     8<-----] 00:00:11       750,000 reads  @     14.9 µs/read;   4.04 M reads/minute[     8=-----] 00:00:12       820,000 reads  @     15.1 µs/read;   3.99 M reads/minute[      8<----] 00:00:13       890,000 reads  @     15.8 µs/read;   3.81 M reads/minute[      8=----] 00:00:14       960,000 reads  @     14.7 µs/read;   4.07 M reads/minute[       8<---] 00:00:15     1,030,000 reads  @     14.7 µs/read;   4.09 M reads/minute[       8=---] 00:00:16     1,100,000 reads  @     14.7 µs/read;   4.09 M reads/minute[        8<--] 00:00:17     1,170,000 reads  @     14.6 µs/read;   4.10 M reads/minute[        8=--] 00:00:18     1,240,000 reads  @     14.6 µs/read;   4.10 M reads/minute[         8<-] 00:00:19     1,310,000 reads  @     14.6 µs/read;   4.11 M reads/minute[         8=-] 00:00:20     1,380,000 reads  @     14.7 µs/read;   4.07 M reads/minute[          8<] 00:00:21     1,450,000 reads  @     14.7 µs/read;   4.09 M reads/minute[          8=] 00:00:22     1,520,000 reads  @     14.7 µs/read;   4.09 M reads/minute[---------->8] 00:00:23     1,590,000 reads  @     14.6 µs/read;   4.10 M reads/minute[----------=8] 00:00:24     1,660,000 reads  @     14.6 µs/read;   4.10 M reads/minute[--------->8 ] 00:00:25     1,730,000 reads  @     14.6 µs/read;   4.10 M reads/minute[---------=8 ] 00:00:26     1,800,000 reads  @     14.7 µs/read;   4.08 M reads/minute[-------->8  ] 00:00:27     1,870,000 reads  @     14.6 µs/read;   4.11 M reads/minute[--------=8  ] 00:00:28     1,940,000 reads  @     14.6 µs/read;   4.10 M reads/minute[------->8   ] 00:00:29     2,010,000 reads  @     14.6 µs/read;   4.10 M reads/minute[-------=8   ] 00:00:30     2,080,000 reads  @     14.9 µs/read;   4.03 M reads/minute[------>8    ] 00:00:31     2,150,000 reads  @     14.6 µs/read;   4.10 M reads/minute[------=8    ] 00:00:33     2,220,000 reads  @     14.7 µs/read;   4.08 M reads/minute[----->8     ] 00:00:34     2,290,000 reads  @     14.7 µs/read;   4.09 M reads/minute[-----=8     ] 00:00:35     2,360,000 reads  @     15.0 µs/read;   4.00 M reads/minute[---->8      ] 00:00:36     2,430,000 reads  @     14.6 µs/read;   4.10 M reads/minute[----=8      ] 00:00:37     2,500,000 reads  @     14.7 µs/read;   4.10 M reads/minute[--->8       ] 00:00:38     2,570,000 reads  @     14.6 µs/read;   4.11 M reads/minute[---=8       ] 00:00:40     2,640,000 reads  @     35.8 µs/read;   1.68 M reads/minute[-->8        ] 00:00:41     2,710,000 reads  @     15.0 µs/read;   3.99 M reads/minute[--=8        ] 00:00:42     2,780,000 reads  @     14.9 µs/read;   4.03 M reads/minute[->8         ] 00:00:43     2,850,000 reads  @     14.6 µs/read;   4.10 M reads/minute[-=8         ] 00:00:44     2,910,000 reads  @     17.1 µs/read;   3.52 M reads/minute[>8          ] 00:00:45     2,980,000 reads  @     14.5 µs/read;   4.12 M reads/minute[=8          ] 00:00:46     3,050,000 reads  @     14.7 µs/read;   4.08 M reads/minute[8<----------] 00:00:47     3,120,000 reads  @     14.6 µs/read;   4.10 M reads/minute[8=----------] 00:00:48     3,190,000 reads  @     14.6 µs/read;   4.11 M reads/minute[ 8<---------] 00:00:49     3,220,000 reads  @     36.0 µs/read;   1.67 M reads/minute[ 8=---------] 00:00:51     3,290,000 reads  @     14.7 µs/read;   4.07 M reads/minute[  8<--------] 00:00:52     3,360,000 reads  @     14.6 µs/read;   4.11 M reads/minute[  8=--------] 00:00:53     3,430,000 reads  @     14.6 µs/read;   4.10 M reads/minute[   8<-------] 00:00:54     3,500,000 reads  @     14.6 µs/read;   4.10 M reads/minute[   8=-------] 00:00:55     3,560,000 reads  @     17.7 µs/read;   3.40 M reads/minute[    8<------] 00:00:56     3,630,000 reads  @     14.6 µs/read;   4.11 M reads/minute[    8=------] 00:00:57     3,700,000 reads  @     14.7 µs/read;   4.07 M reads/minute[     8<-----] 00:00:58     3,770,000 reads  @     15.0 µs/read;   4.01 M reads/minute[     8=-----] 00:00:59     3,840,000 reads  @     17.9 µs/read;   3.34 M reads/minute[      8<----] 00:01:00     3,910,000 reads  @     14.9 µs/read;   4.03 M reads/minute[      8=----] 00:01:01     3,980,000 reads  @     14.7 µs/read;   4.07 M reads/minute[       8<---] 00:01:02     4,050,000 reads  @     15.1 µs/read;   3.98 M reads/minute[       8=---] 00:01:03     4,120,000 reads  @     14.7 µs/read;   4.08 M reads/minute[        8<--] 00:01:04     4,170,000 reads  @     24.0 µs/read;   2.50 M reads/minute[        8=--] 00:01:05     4,240,000 reads  @     14.8 µs/read;   4.05 M reads/minute[         8<-] 00:01:06     4,310,000 reads  @     15.0 µs/read;   4.01 M reads/minute[         8=-] 00:01:07     4,380,000 reads  @     14.7 µs/read;   4.08 M reads/minute[          8<] 00:01:08     4,450,000 reads  @     14.7 µs/read;   4.08 M reads/minute[          8=] 00:01:10     4,510,000 reads  @     18.1 µs/read;   3.32 M reads/minute[---------->8] 00:01:11     4,580,000 reads  @     14.7 µs/read;   4.07 M reads/minute[----------=8] 00:01:12     4,650,000 reads  @     14.6 µs/read;   4.10 M reads/minute[--------->8 ] 00:01:13     4,720,000 reads  @     14.6 µs/read;   4.11 M reads/minute[---------=8 ] 00:01:14     4,790,000 reads  @     14.7 µs/read;   4.08 M reads/minute[-------->8  ] 00:01:15     4,850,000 reads  @     19.0 µs/read;   3.16 M reads/minute[--------=8  ] 00:01:16     4,920,000 reads  @     14.7 µs/read;   4.08 M reads/minute[------->8   ] 00:01:17     4,990,000 reads  @     14.6 µs/read;   4.10 M reads/minute[-------=8   ] 00:01:18     5,060,000 reads  @     14.7 µs/read;   4.08 M reads/minute[------>8    ] 00:01:19     5,130,000 reads  @     17.6 µs/read;   3.41 M reads/minute[------=8    ] 00:01:20     5,200,000 reads  @     14.8 µs/read;   4.05 M reads/minute[----->8     ] 00:01:21     5,270,000 reads  @     14.6 µs/read;   4.10 M reads/minute[-----=8     ] 00:01:22     5,340,000 reads  @     14.7 µs/read;   4.08 M reads/minute[---->8      ] 00:01:23     5,410,000 reads  @     14.7 µs/read;   4.09 M reads/minute[----=8      ] 00:01:24     5,470,000 reads  @     17.9 µs/read;   3.34 M reads/minute[--->8       ] 00:01:25     5,540,000 reads  @     14.9 µs/read;   4.03 M reads/minute[---=8       ] 00:01:26     5,610,000 reads  @     14.7 µs/read;   4.09 M reads/minute[-->8        ] 00:01:27     5,680,000 reads  @     14.6 µs/read;   4.10 M reads/minute[--=8        ] 00:01:28     5,750,000 reads  @     14.7 µs/read;   4.09 M reads/minute[->8         ] 00:01:30     5,810,000 reads  @     18.4 µs/read;   3.26 M reads/minute[-=8         ] 00:01:31     5,880,000 reads  @     14.9 µs/read;   4.02 M reads/minute[>8          ] 00:01:32     5,950,000 reads  @     14.6 µs/read;   4.12 M reads/minute[=8          ] 00:01:33     6,020,000 reads  @     14.7 µs/read;   4.10 M reads/minute[8<----------] 00:01:34     6,090,000 reads  @     14.6 µs/read;   4.10 M reads/minute[8=----------] 00:01:35     6,150,000 reads  @     18.4 µs/read;   3.26 M reads/minute[ 8<---------] 00:01:36     6,220,000 reads  @     14.7 µs/read;   4.09 M reads/minute[ 8=---------] 00:01:37     6,290,000 reads  @     14.7 µs/read;   4.08 M reads/minute[  8<--------] 00:01:38     6,360,000 reads  @     14.7 µs/read;   4.09 M reads/minute[  8=--------] 00:01:39     6,430,000 reads  @     14.7 µs/read;   4.09 M reads/minute[   8<-------] 00:01:40     6,490,000 reads  @     18.2 µs/read;   3.29 M reads/minute[   8=-------] 00:01:41     6,560,000 reads  @     14.8 µs/read;   4.05 M reads/minute[    8<------] 00:01:42     6,630,000 reads  @     15.1 µs/read;   3.98 M reads/minute[    8=------] 00:01:43     6,700,000 reads  @     15.0 µs/read;   3.99 M reads/minute[     8<-----] 00:01:44     6,760,000 reads  @     18.4 µs/read;   3.26 M reads/minute[     8=-----] 00:01:45     6,830,000 reads  @     15.4 µs/read;   3.88 M reads/minute[      8<----] 00:01:46     6,900,000 reads  @     14.7 µs/read;   4.07 M reads/minute[      8=----] 00:01:47     6,970,000 reads  @     14.6 µs/read;   4.10 M reads/minute[       8<---] 00:01:48     7,040,000 reads  @     14.7 µs/read;   4.09 M reads/minute[       8=---] 00:01:50     7,090,000 reads  @     23.6 µs/read;   2.54 M reads/minute[        8<--] 00:01:51     7,160,000 reads  @     14.8 µs/read;   4.05 M reads/minute[        8=--] 00:01:52     7,230,000 reads  @     14.7 µs/read;   4.07 M reads/minute[         8<-] 00:01:53     7,300,000 reads  @     15.1 µs/read;   3.97 M reads/minute[         8=-] 00:01:54     7,370,000 reads  @     14.9 µs/read;   4.02 M reads/minute[          8<] 00:01:55     7,430,000 reads  @     19.0 µs/read;   3.15 M reads/minute[          8=] 00:01:56     7,500,000 reads  @     14.8 µs/read;   4.04 M reads/minute[-------
