@@ -1,0 +1,155 @@
+Script started on Tue 06 Aug 2019 01:04:30 PM EDT
+]0;amv69@login0b:~/rnaseqdata[?1034h(base) [amv69@n439 rnaseqdata]$ samtools [K[K[K[K[K[K[K[K[Kconda activate py2
+]0;amv69@login0b:~/rnaseqdata(py2) [amv69@n439 rnaseqdata]$ samtools view -Sb ck-[K01[K[K[K[Kck01_sce.sam > sk01>[K_sce.bam
+[E::hts_open_format] Failed to open file ck01_sce.sam
+samtools view: failed to open "ck01_sce.sam" for reading: No such file or directory
+]0;amv69@login0b:~/rnaseqdata(py2) [amv69@n439 rnaseqdata]$ ls
+10_CKY3624_G1097D_C2_hs2_unique_sorted.bw  26_CKY3620_PAM-S_C3_hs2_unique_sorted.bw
+11_CKY3425_H1085Y_C2_hs2_unique_sorted.bw  27_CKY3628_E1103G_C3_hs2_unique_sorted.bw
+12_CKY3427_H1085W_C2_hs2_unique_sorted.bw  28_CKY3859_N1082S_C3_hs2_unique_sorted.bw
+17_CKY3284_WT_C2_hs2_unique_sorted.bw      29_CKY3861_H1085Q_C3_hs2_unique_sorted.bw
+18_CKY3620_PAM-S_C2_hs2_unique_sorted.bw   2-CKY3620-PAM_combined_hs2_unique_sorted.bw
+19_CKY3628_E1103G_C2_hs2_unique_sorted.bw  30_CKY3624_G1097D_C3_hs2_unique_sorted.bw
+1-CKY3284-WT_C1_hs2_unique_sorted.bw       31_CKY3425_H1085Y_C3_hs2_unique_sorted.bw
+20_CKY3859_N1082S_C2_hs2_unique_sorted.bw  32_CKY3427_H1085W_C3_hs2_unique_sorted.bw
+21_CKY3861_H1085Q_C2_hs2_unique_sorted.bw  3_CKY3628_E1103G_C1_hs2_unique_sorted.bw
+22_CKY3624_G1097D_C2_hs2_unique_sorted.bw  4_CKY3859_N1082S_C1_hs2_unique_sorted.bw
+23_CKY3425_H1085Y_C2_hs2_unique_sorted.bw  results.npz
+24_CKY3427_H1085W_C2_hs2_unique_sorted.bw  [0m[01;35mrnaResults.png[0m
+25_CKY3284_WT_C3_hs2_unique_sorted.bw      sk01_sce.bam
+]0;amv69@login0b:~/rnaseqdata(py2) [amv69@n439 rnaseqdata]$ ls[K[Kcd ..
+]0;amv69@login0b:~(py2) [amv69@n439 ~]$ cd netseqdata/
+]0;amv69@login0b:~/netseqdata(py2) [amv69@n439 netseqdata]$ ls
+Budding_Fission.fa
+Budding_Fission.fa.amb
+Budding_Fission.fa.ann
+Budding_Fission.fa.bwt
+Budding_Fission.fa.pac
+Budding_Fission.fa.sa
+ck01_S1_L003_R2_001_hs2_unique_sorted.bw
+ck01_sce.sam
+ck01_spo.sam
+ck02_S9_L004_R2_001_hs2_unique_sorted.bw
+ck03_S2_L003_R2_001_hs2_unique_sorted.bw
+ck04_S10_L004_R2_001_hs2_unique_sorted.bw
+ck05_S3_L003_R2_001_hs2_unique_sorted.bw
+ck06_S11_L004_R2_001_hs2_unique_sorted.bw
+ck07_S4_L003_R2_001_hs2_unique_sorted.bw
+ck08_S12_L004_R2_001_hs2_unique_sorted.bw
+ck09_S5_L003_R2_001_hs2_unique_sorted.bw
+ck10_S13_L004_R2_001_hs2_unique_sorted.bw
+ck11_S6_L003_R2_001_hs2_unique_sorted.bw
+ck12_S14_L004_R2_001_hs2_unique_sorted.bw
+ck13_S7_L003_R2_001_hs2_unique_sorted.bw
+ck14_S15_L004_R2_001_hs2_unique_sorted.bw
+ck15_S8_L003_R2_001_hs2_unique_sorted.bw
+ck16_S16_L004_R2_001_hs2_unique_sorted.bw
+hisat2Sce_Spo.sbatch
+[0m[01;34mmerged_F_R_bg[0m
+results.npz
+[01;35mresults.png[0m
+Undetermined_S0_L003_R2_001_hs2_unique_sorted.bw
+Undetermined_S0_L004_R2_001_hs2_unique_sorted.bw
+]0;amv69@login0b:~/netseqdata(py2) [amv69@n439 netseqdata]$ lscd netseqdata/..[K[3Plssamtools view -Sb ck01_sce.sam > sk01_sce.bam[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[27Pconda activate py2exit[Kls -hal[Kjobs[2Pbgexit../bwa/./bwa mem Budding_Fission.fa /bgfs/ckaplan/Anand_seqq/NET_seq/Hiseq/18314Kap_N19007/ck01_S1_L003_R1_001.fastq /bgfs/ckaplan/Anand_seq/NET_seq//Hiseq/18314Kap_N19007/ck01_S1_L003_R2_001.fastq > ck01_sce.sam [A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pbgjobs[2Pls -hal[3Pexitconda activate py2samtools view -Sb ck01_sce.sam > sk01_sce.bam[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Ksamtools view -Sb ck01_sce.sam > sk01_sce.bam
+^Z
+[1]+  Stopped                 samtools view -Sb ck01_sce.sam > sk01_sce.bam
+]0;amv69@login0b:~/netseqdata(py2) [amv69@n439 netseqdata]$ bg
+[1]+ samtools view -Sb ck01_sce.sam > sk01_sce.bam &
+]0;amv69@login0b:~/netseqdata(py2) [amv69@n439 netseqdata]$ cd ..
+]0;amv69@login0b:~(py2) [amv69@n439 ~]$ s[Kmodule load samblaster
+[1;31mLmod has detected the following error: [0m These module(s) exist but cannot be
+loaded as requested: "samblaster"
+
+   Try: "module spider samblaster" to see how to load the module(s).
+
+
+
+
+]0;amv69@login0b:~[1]+  Done                    samtools view -Sb ck01_sce.sam > sk01_sce.bam  (wd: ~/netseqdata)
+(wd now: ~)
+(py2) [amv69@n439 ~]$ module spider sm[Kamblaster
+[?1h=[m
+-------------------------------------------------------------------------------------[m
+  samblaster: samblaster/0.1.24[m
+-------------------------------------------------------------------------------------[m
+    Description:[m
+      samblaster: a tool to mark duplicates and extract discordant and split reads[m
+      from sam files.[m
+[m
+    You will need to load all module(s) on any one of the lines below before the "samblas[m ter/0.1.24" module is available to load.[m
+[m
+      gcc/8.2.0[m
+ [m
+[m
+[K[?1l>]0;amv69@login0b:~(py2) [amv69@n439 ~]$ module load gcc/8.2.0 
+]0;amv69@login0b:~(py2) [amv69@n439 ~]$ moduel[K[Kle load samblaster
+]0;amv69@login0b:~(py2) [amv69@n439 ~]$ cd allLys/Lys2/2[K
+]0;amv69@login0b:~/allLys/Lys2(py2) [amv69@n439 Lys2]$ ls
+[0m[01;32malignment.sh[0m         fastqReads2.txt
+chr2.fa              fastqReads.txt
+chr2.fa.amb          [01;32mfragment_lengths.sh[0m
+chr2.fa.ann          [01;32mfragmentSizes_input.png[0m
+chr2.fa.bwt          [01;32minput_adjusted_reads_per_million.sh[0m
+chr2.fa.fai          [01;32mlys2-128delta_ME013_S13_raw.bw[0m
+chr2.fa.pac          [01;32mlys2-128delta_ME014_S14_raw.bw[0m
+chr2.fa.sa           [01;32mlys2-173R2_ME015_S15_R1_001.fastq[0m
+chrII_est.txt        [01;32mlys2-173R2_ME015_S15_R2_001.fastq[0m
+chrII.fa             [01;32mlys2-173R2_ME015_S15_raw.bw[0m
+chrII.fa.amb         [01;32mlys2-173R2_ME015_S15.sorted.bam[0m
+chrII.fa.ann         [01;32mlys2-173R2_ME015_S15.sorted.bam.bai[0m
+chrII.fa.bwt         [01;32mlys2-173R2_ME016_S16_R1_001.fastq.gz[0m
+chrII.fa.pac         [01;32mlys2-173R2_ME016_S16_R2_001.fastq.gz[0m
+chrII.fa.sa          [01;32mlys2-173R2_ME016_S16_raw.bw[0m
+chrII_lys2.fa        [01;32mlys2-173R2_ME016_S16.sorted.bam[0m
+chrII_lys2.fa.amb    [01;32mlys2-173R2_ME016_S16.sorted.bam.bai[0m
+chrII_lys2.fa.ann    lys2.fq.bam
+chrII_lys2.fa.bwt    lys2.fq.bam.bai
+chrII_lys2.fa.pac    lys2.fq.discordants.bam
+chrII_lys2.fa.sa     lys2.fq.discordants.bam.bai
+chrII_lys_ty.fa      lys2.fq.splitters.bam
+chrII_lys_ty.fa.pac  lys2.fq.splitters.bam.bai
+chrII_seq.fa         [01;32mreadme.txt[0m
+chrII_ty1.fa         test1.fq
+fastqReads1.txt      [01;32mtest.fastq[0m
+]0;amv69@login0b:~/allLys/Lys2(py2) [amv69@n439 Lys2]$ samtools view -h lys2-173R2_ME015_S15.sorted.bam | samblaster -a  -e -d sam[K[K[Kdisc.sam -s split.sam -o /dev/null
+samblaster: Version 0.1.24
+samblaster: Inputting from stdin
+samblaster: Opening /dev/null for write.
+samblaster: Opening disc.sam for write.
+samblaster: Opening split.sam for write.
+samblaster: Loaded 17 header sequence entries.
+samblaster: Can't find first and/or second of pair in sam block of length 1 for id: NS500211:684:H2Y22BGXB:2:22305:2295:10402
+samblaster:    At location: I:15
+samblaster:    Are you sure the input is sorted by read ids?
+]0;amv69@login0b:~/allLys/Lys2(py2) [amv69@n439 Lys2]$ samtools sort lys2-173R2_ME015_S15.sorted.bam > lys2s15.bam
+[bam_sort_core] merging from 6 files and 1 in-memory blocks...
+
+]0;amv69@login0b:~/allLys/Lys2(py2) [amv69@n439 Lys2]$ 
+]0;amv69@login0b:~/allLys/Lys2(py2) [amv69@n439 Lys2]$ samtools sort lys2-173R2_ME015_S15.sorted.bam > lys2s15.bam[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cview -h lys2-173R2_ME015_S15.sorted.bam | samblaster -a  -e -d disc.sam -s split.sam -o /dev/null[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d d[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d di[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d dis[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d disc[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d disc.[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d disc.s[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d disc.sa[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d disc.sam[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d disc.sam [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d disc.sam -[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d disc.sam -s[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d disc.sam -s [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d disc.sam -s s[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d disc.sam -s sp[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d disc.sam -s spl[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d disc.sam -s spli[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d disc.sam -s split[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d disc.sam -s split.[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csbam | samblaster -a -e -d disc.sam -s split[1@.[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1bam | samblaster -a -e -d disc.sam -s spli[1@t[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C5bam | samblaster -a -e -d disc.sam -s spl[1@i[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+samblaster: Version 0.1.24
+samblaster: Inputting from stdin
+samblaster: Opening /dev/null for write.
+samblaster: Opening disc.sam for write.
+samblaster: Opening split.sam for write.
+[E::hts_open_format] Failed to open file lys2s15bam
+samtools view: failed to open "lys2s15bam" for reading: No such file or directory
+samblaster: Input file is empty. Exiting.
+
+]0;amv69@login0b:~/allLys/Lys2(py2) [amv69@n439 Lys2]$ samtools view -h lys2s15bam | samblaster -a -e -d disc.sam -s spllit.sam -o /dev/null[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.bam | samblaster -a -e -d disc.sam -s sp[1@l[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+samblaster: Version 0.1.24
+samblaster: Inputting from stdin
+samblaster: Opening /dev/null for write.
+samblaster: Opening disc.sam for write.
+samblaster: Opening split.sam for write.
+samblaster: Loaded 17 header sequence entries.
+samblaster: Can't find first and/or second of pair in sam block of length 1 for id: NS500211:684:H2Y22BGXB:2:22305:2295:10402
+samblaster:    At location: I:15
+samblaster:    Are you sure the input is sorted by read ids?
+]0;amv69@login0b:~/allLys/Lys2(py2) [amv69@n439 Lys2]$ samtools view -h lys2s15.bam | samblaster -a -e -d disc.sam -s spplit.sam -o /dev/null[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbam | samblaster -a -e -d disc.sam -s spl[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Psort lys2-173R2_ME015_S15.sorted.bam > lys2s15.bam
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@-[1@n[1@ 
+[bam_sort_core] merging from 6 files and 1 in-memory blocks...
+]0;amv69@login0b:~/allLys/Lys
