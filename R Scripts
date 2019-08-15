@@ -1,0 +1,7 @@
+
+#Export Matrix to Morpheus
+> m=read.delim("Matrix File", skip=2, header=F)
+> m = as.matrix(m[,-c(1:6)])
+> library(pheatmap)
+> pheatmap(m, cluster_rows=F, cluster_cols=F) #For testing
+> write.table(m, "~/matrix.txt", sep="\t")
