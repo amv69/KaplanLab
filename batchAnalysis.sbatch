@@ -28,10 +28,8 @@ module load hisat2/2.1.0
 
 for f1 in *cutadapt.fastq;
 do
-        #TODO-FIX
-        #Change it to match align3 output
-        echo $f1 && hisat2 -q --phred33 --max-intronlen 4000 --known-splicesite-infile --no-unal /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/sce_index_2019/R64-1-1_chr_splicesites.txt -x /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/sce_index_2019/ht2_Budding_Fission ${f1} -S ${f1/UMI_cutadapt.fastq/hs2.sam} --rna-strandness R --secondary --no-mixed --summary-file ${f1/UMI_cutadapt.fastq/hs2.txt} &&
-        hisat2 -q --phred33 --max-intronlen 4000 --known-splicesite-infile --no-unal /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/spo_index_2019/spo_chr_splicesites.txt  -x /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/spo_index_2019/ht2_Budding_Fission_spo ${f1} -S ${f1/UMI_cutadapt.fastq/hs2.sam} --rna-strandness R --secondary --no-mixed --summary-file ${f1/UMI_cutadapt.fastq/hs2.txt};
+        echo $f1 && hisat2 -q --phred33 --max-intronlen 4000 --known-splicesite-infile --no-unal /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/sce_index_2019/R64-1-1_chr_splicesites.txt -x /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/sce_index_2019/ht2_Budding_Fission ${f1} -S ${f1/UMI_cutadapt.fastq/sce_hs2.sam} --rna-strandness R --secondary --no-mixed --summary-file ${f1/UMI_cutadapt.fastq/sce_hs2.txt} &&
+        hisat2 -q --phred33 --max-intronlen 4000 --known-splicesite-infile --no-unal /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/spo_index_2019/spo_chr_splicesites.txt  -x /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/spo_index_2019/ht2_Budding_Fission_spo ${f1} -S ${f1/UMI_cutadapt.fastq/spo_hs2.sam} --rna-strandness R --secondary --no-mixed --summary-file ${f1/UMI_cutadapt.fastq/spo_hs2.txt};
 done &&
 
 module load gcc/8.2.0
@@ -49,4 +47,23 @@ for f1 in *sorted.sam;
 do
         echo $f1 && samtools index $f1 &&
 	bamCoverage -b $f1 -o ${f1/_sorted.sam/.bw};
+done &&
+
+for f1 in *.bw;
+do
+  echo $f1 &&
+  computeMatrix scale-regions --regionsFileName introns.bed \
+  --scoreFileName $f1 --beforeRegionStartLength 200 --afterRegionStartLength 1000 \
+  --binSize 10 \
+  --outFileName ${f1/.bw/_matrix} --sortRegions descend;
+done &&
+
+for f1 in *matrix;
+do
+  echo $f1 &&
+  plotHeatmap --matrixFile $f1 \
+  --kmeans 2 \
+  --sortUsing region_length \
+  --outFileName visualOutput/${f1/_matrix/_two_clusters.pdf} \
+  --plotTitle "Pol II" --whatToShow "heatmap and colorbar";
 done
