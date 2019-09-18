@@ -1,0 +1,1000 @@
+module spider python
+vi scripts/align2.sbatch 
+ls
+sbatch scripts/align2.sbatch 
+cat slurm-295837.out 
+ls
+scancel 295837
+vi scripts/align2.sbatch 
+sbatch scripts/align2.sbatch 
+ls
+rm slurm-295837.out 
+cat slurm-295838.out 
+cat
+cat slurm-295838.out 
+ls
+scancel 295838
+ls
+rm *UMI*
+ls
+rm slurm-295838.out 
+module spider deeptools
+module spider deeptools/3.3.0 
+module load deeptools/3.3.0
+module unload deeptools/3.3.0 
+vi scripts/align2.sbatch 
+ls
+sbatch scripts/align2.sbatch 
+cat slurm-295839.out 
+ls
+cat slurm-295839.out 
+ls
+scancel 295839
+rm slurm-295839.out 
+vi scripts/align2.sbatch 
+sbatch scripts/align2.sbatch 
+cat slurm-295840.out 
+exit
+cp /bgfs/ckaplan/Alex/NET_seq/scripts/align2.sbatch Github/
+update
+upload
+mv align2.sbatch batchAnalysis.sbatch
+upload
+ls
+rm -rf Anand_seq/
+upload
+git commit -a
+upload
+git push
+git pull
+ls
+git push
+conda activate rnaseq
+hisat2 -q --phred33 --no-unal --no-softclip -x /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/sce_index_2019/ht2_Budding_Fission -1 lys2-173R2_ME015_S15_R1_001.fastq -2 lys2-173R2_ME015_S15_R2_001.fastq -S softClipsLys2.sam
+bg
+jobs
+tail /bgfs/ckaplan/Alex/NET_seq/slurm-296020.out 
+tail -10 /bgfs/ckaplan/Alex/NET_seq/slurm-296020.out 
+tail -15 /bgfs/ckaplan/Alex/NET_seq/slurm-296020.out 
+jobs
+ls
+samtools view -f 256 softClipsLys2.sam | awk '$6 ~/S/ && $7 == "=" {print $0}' > Secondary_clipped.sam
+samtools view Secondary_clipped.sam | head
+samtools view Secondary_clipped.sam
+samtools view -f 256 softClipsLys2.sam
+clear
+ls
+tail -10 /bgfs/ckaplan/Alex/NET_seq/slurm-296020.out 
+ls
+tail -10 /bgfs/ckaplan/Alex/NET_seq/slurm-296020.out 
+tail -20 /bgfs/ckaplan/Alex/NET_seq/slurm-296020.out 
+ls /bgfs/ckaplan/Alex/NET_seq/
+vi /bgfs/ckaplan/Alex/NET_seq/scripts/align3.sbatch 
+ls /bgfs/ckaplan/Alex/NET_seq/
+tail -20 /bgfs/ckaplan/Alex/NET_seq/slurm-296020.out 
+ls
+cd ..
+ls
+mkdir bwa
+cd bwa
+tail -20 /bgfs/ckaplan/Alex/NET_seq/slurm-296020.out 
+cp /bgfs/ckaplan/Anand_seq/Genomes/Sce/Budding_Fission.fa .
+../../bwa/./bwa index Budding_Fission.fa 
+ls
+../../bwa/./bwa mem -M -v 1 Budding_Fission.fa ../Lys2/lys2-173R2_ME015_S15_R1_001.fastq ../Lys2/lys2-173R2_ME015_S15_R2_001.fastq | gzip -3 > aln-lys2.sam.gz
+ls
+rm aln-lys2.sam.gz 
+cp ../../netseqdata/hisat2Sce_Spo.sbatch .
+vi hisat2Sce_Spo.sbatch 
+rm hisat2Sce_Spo.sbatch 
+vi bwa.sbatch
+vi bwa.sbatch 
+cat bwa.sbatch 
+sbatch bwa.sbatch 
+ls
+cat slurm-296212.out 
+ls -hal
+cat slurm-296212.out 
+ls -hal
+tail -20 /bgfs/ckaplan/Alex/NET_seq/slurm-296020.out 
+ls -hal
+ls
+ls -hgal
+tail -20 /bgfs/ckaplan/Alex/NET_seq/slurm-296020.out 
+ls -hgal
+tail -20 /bgfs/ckaplan/Alex/NET_seq/slurm-296020.out 
+ls /bgfs/ckaplan/Alex/NET_seq/
+tail -20 /bgfs/ckaplan/Alex/NET_seq/slurm-296020.out 
+ls -hgal
+cat slurm-296212.out 
+exit
+ls /bgfs/ckaplan/Alex/NET_seq/
+cd /bgfs/ckaplan/Alex/NET_seq/
+cat slurm-295840.out 
+vi scripts/align2.sbatch 
+ls
+scancel 295840
+rm slurm-295840.out 
+rm *UMI*
+sbatch scripts/align2.sbatch 
+cat slurm-295847.out 
+ls
+cat slurm-295847.out 
+ls
+cat slurm-295847.out 
+ls
+cat slurm-295847.out 
+ls
+cat slurm-295847.out 
+ls
+cat slurm-295847.out 
+ls
+cat slurm-295847.out 
+ls
+cat slurm-295847.out 
+ls
+cat slurm-295847.out 
+la
+ls
+cat slurm-295847.out 
+ls
+ls 
+vi scripts/align2.sbatch 
+cat slurm-295847.out 
+ls
+cat slurm-295847.out 
+ls
+cat slurm-295847.out 
+tail slurm-295847.out 
+ls
+tail slurm-295847.out 
+tail -50 slurm-295847.out 
+ls
+tail -50 slurm-295847.out 
+ls
+tail -50 slurm-295847.out 
+ls
+cd ..
+mkdir ML
+mkdir RNA_seq
+ls
+cd NET_seq/
+ls
+tail slurm-295847.out 
+ls
+tail -100 slurm-295847.out 
+ls
+head ck15_S8_L003_R1_001_UMI.fastq 
+vi scripts/align2.sbatch 
+head ck05_S3_L003_R2_001_cutadapt.fastq 
+vi scripts/align2.sbatch 
+ls
+vi scripts/align2.sbatch 
+vi scripts/align3.sbatch
+vi scripts/align3.sbatch 
+scancel 295847
+sbatch scripts/align3.sbatch 
+ls
+cat slurm-296020.out 
+ls
+ls -hal
+cat slurm-296020.out 
+ls -hal
+cat slurm-296020.out 
+la
+ls -hal
+cat slurm-296020.out 
+ls -hal
+cat slurm-296020.out 
+cd ~
+ls allLys/Lys2/
+ls
+cd allLys/Lys2/
+ls
+head lys2.fq.splitters.bam
+samtools view lys2.fq.splitters.bam
+conda activate rnaseq
+samtools view lys2.fq.splitters.bam
+la
+ls
+samtools view -f 256 lys2-173R2_ME015_S15.sorted.bam | awk '$6 ~/S/ && $7 == "=" {print $0}' > Secondary_clipped.sam
+samtools view Secondary_clipped.sam 
+vi readme.txt 
+vi alignment.sh 
+vi readme.txt 
+vi alignment.sh 
+ls
+srun -n 1 -t 3:00:00 --pty bash
+exit
+gunzip -3 aln-lys2.sam.gz 
+bg
+java
+jobs
+samtools view -f 256 aln-lys2.sam | awk '$6 ~/S/ && $7 == "=" {print $0}' > Secondary_clipped.sam
+conda activate rnaseq
+samtools view -f 256 aln-lys2.sam | awk '$6 ~/S/ && $7 == "=" {print $0}' > Secondary_clipped.sam
+samtools view Secondary_clipped.sam 
+samtools view -F 256 aln-lys2.sam | awk '$6 ~/S/ && $7 == "=" {print $0}' > Secondary_clipped.sam
+samtools view Secondary_clipped.sam 
+cat Secondary_clipped.sam 
+R
+r
+module load R
+module spider r
+cd ..
+ls
+cd ..
+cd /bgfs/ckaplan/Alex/
+ls
+cd NET_seq/
+ls
+cd ..
+mkdir normalization
+cd nora
+cd normalization/
+samtools idxstats /bgfs/ckaplan/Anand_seq/NET_seq/Hiseq/hs2_R1_Hiseq/ck01_S1_L003_R2_001_hs2.bam 
+samtools sort /bgfs/ckaplan/Anand_seq/NET_seq/Hiseq/hs2_R1_Hiseq/ck01_S1_L003_R2_001_hs2.bam > ./ck01_sorted.bam
+bg
+samtools sort /bgfs/ckaplan/Anand_seq/NET_seq/Hiseq/hs2_R1_Hiseq/ck01_S1_L003_R2_001_hs2.bam > ./ck01_sorted.bam
+bg
+samtools sort /bgfs/ckaplan/Anand_seq/NET_seq/Hiseq/hs2_R1_Hiseq/ck02_S1_L003_R2_001_hs2.bam > ./ck02_sorted.bam
+samtools sort /bgfs/ckaplan/Anand_seq/NET_seq/Hiseq/hs2_R1_Hiseq/ck02_S9_L004_R2_001_hs2.bam > ./ck02_sorted.bam
+bg
+jobs
+cd ..
+ls NET_seq/
+ls
+cd NET_seq/
+tail slurm-296020.out 
+vi scripts/align3.sbatch 
+scancel 296020
+rm *slurm*
+ls
+rm *hs2*
+ls
+vi scripts/align3.sbatch 
+vi scripts/alignSce.sbatch
+mv scripts/alignSce.sbatch scripts/alignSpo.sbatch
+vi scripts/alignSce.sbatch
+sbatch scripts/alignSpo.sbatch 
+sbatch scripts/alignSce.sbatch 
+ls
+cat slurm-296655.out 
+ls
+cat slurm-296655.out 
+ls
+ls -hal
+ls
+ls -hal
+cat slurm-296656.out 
+cat slurm-296655.out 
+cd ..
+ls
+cd normalization/
+ls
+jobs
+cd ..
+cd NET_seq/
+ls
+cat slurm-296656.out 
+cat slurm-296655.out 
+exit
+ls
+ls /bgfs/ckaplan/Alex/NET_seq/
+tail /bgfs/ckaplan/Alex/NET_seq/slurm-296020.out 
+ls allLys/Lys2/
+ls allLys/bwa/
+cd allLys/bwa/
+tail slurm-296212.out 
+samtools view -f 256 aln-lys2.sam.gz | awk '$6 ~/S/ && $7 == "=" {print $0}' > Secondary_clipped.sam
+conda activate rnaseq
+samtools view -f 256 aln-lys2.sam.gz | awk '$6 ~/S/ && $7 == "=" {print $0}' > Secondary_clipped.sam
+samtools view Secondary_clipped.sam 
+srun -n 1 -t 4:00:00 --pty bash
+exit
+ls
+cd ..
+cd /bgfs
+cd ckaplan/l
+cd ckaplan/Alex/NET_seq/
+ls
+ls -hal
+exit
+ls
+cd /bgfs/ckaplan/Alex/NET_seq/
+ls
+cat slurm-296655.out 
+cat slurm-296656.out 
+module spider deeptools
+ls
+ls -hal
+grep hal
+ls -hal | grep "hs"
+cat slurm-296655.out 
+ls
+cat /bgfs/ckaplan/Alex/NET_seq/slurm-296655.out 
+cat /bgfs/ckaplan/Alex/NET_seq/slurm-296656.out 
+ls /bgfs/ckaplan/Alex/NET_seq/
+cd /bgfs/ckaplan/Alex/NET_seq/
+ls
+tail slurm-296655.out 
+tail slurm-296656.out 
+ls
+cat scripts/align3.sbatch 
+ls
+ls -hal
+rm *cutadapt*
+ls
+ls -hal
+vi scripts/align3.sbatch 
+ls -hal
+vi scripts/align3.sbatch 
+vi scripts/sort_index.sbatch
+ls
+rm slurm-296655.out 
+rm slurm-296656.out 
+sbatch scripts/sort_index.sbatch 
+cat slurm-300632.out 
+scancel 300632
+rm slurm-300632.out 
+vi scripts/sort_index.sbatch 
+sbatch scripts/sort_index.sbatch 
+cat slurm-300633.out 
+ls
+ls -hal
+cd ~/Github/
+git pull
+ls
+srun -n 1 -t 3:00:00 --pty bash
+cd /bgfs/ckaplan/Alex/NET_seq/
+ls
+ls scripts
+rm *.bai
+sbatch scripts/alignSce.sbatch 
+sbatch scripts/alignSpo.sbatch 
+cd /bgfs/ckaplan/Alex/NET_seq/
+ls
+conda activate rnaseq
+for f1 in *.bam; do echo $f1 && samtools sort $f1 > ${f1/.bam/_sorted.bam}; done
+ls
+samtools index Undetermined_S0_L003_R2_001_UMI_sce.hs2_sorted.bam 
+ls
+for f1 in *sorted.bam; do echo $f1 && samtools index $f1; done
+for f1 in *sorted.bam; do echo $f1 && bamCoverage -b $f1 -o ${f1/_sorted.bam/.bw}; done
+bg
+ls
+jobs
+ls
+cat slurm-300979.out 
+exit
+ls
+srun -n 1 -t 4:00:00 --pty bash
+exit
+conda activate rnaseq
+ls
+for f1 in *sce.hs2.sam; echo $f1 && samtools view -Sb $f1 > ${f1/.sam/.bam}; done
+for f1 in *sce.hs2.sam; samtools view -Sb $f1 > ${f1/.sam/.bam}; done
+for f1 in *_sce.hs2.sam; do echo $f1 &&  samtools view -Sb $f1 > ${f1/.sam/.bam}; done
+bg
+ls
+ls -hal
+job
+jobs
+ls
+bg
+lsls
+ls
+ls -hal
+rm ck09_S5_L003_R1_001_UMI_sce.hs2.bam 
+samtools view -Sb ck09_S5_L003_R1_001_UMI_sce.hs2.sam > ck09_S5_L003_R1_001_UMI_sce.hs2.bam
+for f1 in *_sce.hs2.sam; do echo $f1 &&  samtools view -Sb $f1 > ${f1/.sam/.bam}; done
+cd ..
+cd ~
+cd allLys/bwa/
+ls
+head Secondary_clipped.sam 
+ls
+wc -l Secondary_clipped.sam 
+samtools -f 256 aln-lys2.sam > test.sam
+samtools view  -f 256 aln-lys2.sam > test.sam
+head test.sam 
+wc -l aln-lys2.sam 
+wc -l Secondary_clipped.sam 
+samtools view  -F 256 aln-lys2.sam > test.sam
+head test.sam 
+wc -l test.sam 
+ls
+cd ..
+ cd ..
+ls
+ls netseqdata/
+rm -rf rnaseqdata/
+rm -rf scvsp/
+ls
+cd allLys/
+ls
+cd bwa/
+ls
+cd ..
+cd hisat2/
+ls
+rm *
+ls
+hisat -x /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/sce_index_2019/ht2_Budding_Fission -q --phred33 --no-softclip --secondary --no-unal -1 ../Lys2/lys2-173R2_ME015_S15_R1_001.fastq -2 ../Lys2/lys2-173R2_ME015_S15_R2_001.fastq --summary-file lys2Summary.txt -S new-aln.sam
+hisat2 -x /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/sce_index_2019/ht2_Budding_Fission -q --phred33 --no-softclip --secondary --no-unal -1 ../Lys2/lys2-173R2_ME015_S15_R1_001.fastq -2 ../Lys2/lys2-173R2_ME015_S15_R2_001.fastq --summary-file lys2Summary.txt -S new-aln.sam[B
+ls
+samtools view -f 256 new-aln.sam > test.sam
+ls -hal
+cd ..
+ls
+rm -rf bwa/
+cd hisat2/
+samtools view -f 256 new-aln.sam > test.sam
+head test.sam 
+wc -l test.sam 
+head new-aln.sam 
+head -20 new-aln.sam 
+head -50 new-aln.sam 
+wc -l new-aln.sam 
+wc - l test.sam 
+wc -l test.sam 
+rm new-aln.sam 
+rm test.sam 
+vi hisat.sbatch
+vi /bgfs/ckaplan/Alex/NET_seq/scripts/align2.sbatch 
+vi hisat.sbatch
+sbatch hisat.sbatch 
+cat sl
+ls
+cat slurm-301007.out 
+ls -hal
+cat slurm-301007.out 
+samtools view -f 256 new-aln.sam > secondary.sam
+wc -l secondary.sam 
+wc -l new-aln.sam 
+samtools view -Sb new-aln.sam >new-aln.bam
+rm new-aln.sam 
+ls
+samtools -Sb secondary.sam >secondary.bam
+samtools view -Sb secondary.sam >secondary.bam
+samtools sort secondary.sam 
+samtools view -H new-aln.bam > header
+cat header secondary.sam 
+cat header secondary.sam > secondary_h.sam
+samtools view -Sb secondary_h.sam > secondary.bam
+samtools sort secondary.bam > secondary_sorted.bam
+samtools index secondary_sorted.bam 
+ls
+cd ..
+cd Lys2/
+ls
+exit
+ls
+cd /bgfs/ckaplan/Alex/NET_seq/
+ls
+cat slurm-300
+ls
+cat slurm-300796.out 
+vi scripts/alignSpo.sbatch 
+rm slurm-300796.out 
+ls
+sbatch scripts/alignSpo.sbatch 
+cat slurm-300979.out 
+ls
+srun -n 1 -t 4:00:00 --pty bash
+exit
+vi Github/makeGraphs.sbatch 
+cd /bgfs/ckaplan/Alex/NET_seq/
+ls
+ls visualOutput/
+rm visualOutput/*
+sbatch ~/Github/makeGraphs.sbatch 
+ls
+ls visualOutput/
+cat slurm-301189.out 
+computeMatrix
+conda activate rnaseq
+computeMatrix
+conda deactivate
+module load deeptools/3.3.0
+computeMatrix
+j
+h
+m
+plotHeatmap
+vi ~/Github/makeGraphs.sbatch 
+sbatch ~/Github/makeGraphs.sbatch 
+cat slurm-301190.out 
+ls
+cat slurm-301190.out 
+ls
+cat slurm-301190.out 
+ls visualOutput/
+cat slurm-301190.out 
+exit
+ls
+cd allLys/
+cd Lys2/
+ls
+cd ..
+cd hisat2/
+ls
+conda activate rnaseq
+samtools view -f 256 new-aln.bam | awk '$6 ~/S/ && $7 == "=" {print $0}' > Secondary_clipped.sam
+samtools view Secondary_clipped.sam 
+head Secondary_clipped.sam 
+samtools view -f 256 new-aln.bam | awk '$6 ~/N/ && $7 == "=" {print $0}' > Secondary_clipped.sam
+cat Secondary_clipped.sam 
+samtools view Secondary_clipped.sam | wc -l
+cat Secondary_clipped.sam | wc -l
+samtools view -Sb Secondary_clipped.sam > Secondary_clipped.bam
+ls
+cat header Secondary_clipped.sam > header_second.sam
+samtools view -Sb header_second.sam > Secondary_clipped.bam
+cat Secondary_clipped.bam | wc -l
+samtools view Secondary_clipped.bam | wc -l
+samtools sort Secondary_clipped.bam > Seconday_clipped_sorted.bam
+samtools index Seconday_clipped_sorted.bam 
+ls
+cd /bgfs/ckaplan/Alex/NET_seq/
+vi ~/Github/makeGraphs.sbatch 
+sabtch ~/Github/makeGraphs.sbatch 
+sbatch ~/Github/makeGraphs.sbatch 
+ls
+cat slurm-301707.out 
+vi ~/Github/makeGraphs.sbatch 
+sbatch ~/Github/makeGraphs.sbatch 
+cat slurm-301709.out 
+vi ~/Github/makeGraphs.sbatch 
+sbatch ~/Github/makeGraphs.sbatch 
+cat slurm-301719.out 
+vi ~/Github/makeGraphs.sbatch 
+sbatch ~/Github/makeGraphs.sbatch 
+cat slurm-301720.out
+ls
+ls slurm
+grep slurm
+ls
+cat slurm-301720.out 
+ls
+
+mv Galaxy2-\[UCSC_Main_on_S._cerevisiae__ncbiRefSeq_\(genome\)\].bed  introns_500updown.bed
+vi ~/Github/makeGraphs.sbatch 
+sbatch ~/Github/makeGraphs.sbatch 
+cat slurm-301722.out
+rm introns.bed 
+mv Galaxy3-\[UCSC_Main_on_S._cerevisiae__ncbiRefSeq_\(genome\)\].bed introns.bed
+vi ~/Github/makeGraphs.sbatch 
+sbatch ~/Github/makeGraphs.sbatch 
+cat slurm-301723.out 
+ls
+cd /bgfs/ckaplan/Alex/NET_seq/
+ls
+vi ~/Github/makeGraphs.sbatch 
+sbatch ~/Github/makeGraphs.sbatch 
+cat slurm-301740.out 
+vi ~/Github/makeGraphs.sbatch 
+sbatch ~/Github/makeGraphs.sbatch 
+cat slurm-301743.out 
+vi ~/Github/makeGraphs.sbatch 
+sbatch ~/Github/makeGraphs.sbatch 
+cat slurm-301744.out 
+ls
+featureCounts
+module load feturecounts
+module load featurecounts
+module spider feature
+module spider featurecounts
+module spider featureCounts
+module spider
+conda activate rnaseq
+conda install featurecounts
+module load htseq
+htseq-count ck01_S1_L003_R1_001_UMI_sce.hs2.sam introns.bed 
+htseq-count ck01_S1_L003_R1_001_UMI_sce.hs2.sam /bgfs/ckaplan/Anand_seq/Genomes/Sce/Saccharomyces_cerevisiae.R64-1-1.40.gtf 
+htseq-count ck01_S1_L003_R1_001_UMI_sce.hs2.sam /bgfs/ckaplan/Anand_seq/Genomes/Sce/Saccharomyces_cerevisiae.R64-1-1_chr.gff3 
+htseq-count ck01_S1_L003_R1_001_UMI_sce.hs2.sam /bgfs/ckaplan/Anand_seq/Genomes/Sce/Saccharomyces_cerevisiae.R64-1-1.40.gff3 
+htseq-count ck01_S1_L003_R1_001_UMI_sce.hs2.sam /bgfs/ckaplan/Anand_seq/Genomes/Sce/Saccharomyces_cerevisiae.R64-1-1.40.gtf > test.txt
+ls
+cd /bgfs/ckaplan/Alex/NET_seq/
+module load htseq
+htseq
+htseq-count
+htseq-count ck01_S1_L003_R1_001_UMI_sce.hs2.sam /bgfs/ckaplan/Anand_seq/Genomes/Sce/saccharomyces_cerevisiae_R64-1-1_20110208.gff  > test.txt
+htseq-count ck01_S1_L003_R1_001_UMI_sce.hs2.sam /bgfs/ckaplan/Anand_seq/Genomes/Sce/Saccharomyces_cerevisiae_R64-1-1_chr.gtf  > test.txt
+htseq-count ck01_S1_L003_R1_001_UMI_sce.hs2.sam /bgfs/ckaplan/Anand_seq/Genomes/Sce/Saccharomyces_cerevisiae_R64-1-1.40.gtf  > test.txt
+htseq-count ck01_S1_L003_R1_001_UMI_sce.hs2.sam /bgfs/ckaplan/Anand_seq/Genomes/Sce/Saccharomyces_cerevisiae.R64-1-1.40.gtf  > test.txt
+cat test.txt 
+ls
+conda activate py2
+conda activate ~/miniconda3/envs/py2
+for f1 in *sorted.bam; do echo $f1 && bamCoverage -b $f1 -o ${f1/_sorted.bam/.bw}; done
+unset PYTHONHOME
+for f1 in *sorted.bam; do echo $f1 && bamCoverage -b $f1 -o ${f1/_sorted.bam/.bw}; done
+ls
+mkdir visualOutput
+sbatch ~/Github/makeGraphs.sbatch 
+cat slurm-302166.out 
+cp ../data/introns.bed ,
+cp ../data/introns.bed .
+sbatch ~/Github/makeGraphs.sbatch 
+cat slurm-302167.out 
+vi matrixOut.R
+for f1 in *matrix_scaledGenes; do echo $f1 && Rscript matrixOut.R $f1; done
+module load gcc/8.2.0
+moudle load R/3.6.0
+module load R/3.6.0
+module load e/3.6.0
+module load r/3.6.0
+for f1 in *matrix_scaledGenes; do echo $f1 && Rscript matrixOut.R $f1; done
+vi matrixOut.R 
+for f1 in *matrix_scaledGenes; do echo $f1 && Rscript matrixOut.R $f1; done
+rm matrixOut.R 
+vi matrixOut.R
+for f1 in *matrix_scaledGenes; do echo $f1 && Rscript matrixOut.R $f1; done
+vi matrixOut.R
+for f1 in *matrix_scaledGenes; do echo $f1 && Rscript matrixOut.R $f1; done
+vi matrixOut.R
+for f1 in *matrix_scaledGenes; do echo $f1 && Rscript matrixOut.R $f1; done
+vi matrixOut.R
+for f1 in *matrix_scaledGenes; do echo $f1 && Rscript matrixOut.R $f1; done
+vi matrixOut.R 
+for f1 in *matrix_scaledGenes; do echo $f1 && Rscript matrixOut.R $f1; done
+vi matrixOut.R 
+for f1 in *matrix_scaledGenes; do echo $f1 && Rscript matrixOut.R $f1; done
+vi matrixOut.R 
+for f1 in *matrix_scaledGenes; do echo $f1 && Rscript matrixOut.R $f1; done
+vi matrixOut.R 
+for f1 in *matrix_scaledGenes; do echo $f1 && Rscript matrixOut.R $f1; done
+vi matrixOut.R 
+for f1 in *matrix_scaledGenes; do echo $f1 && Rscript matrixOut.R $f1; done
+vi matrixOut.R 
+for f1 in *matrix_scaledGenes; do echo $f1 && Rscript matrixOut.R $f1; done
+vi matrixOut.R 
+for f1 in *matrix_scaledGenes; do echo $f1 && Rscript matrixOut.R $f1; done
+vi matrixOut.R 
+for f1 in *matrix_scaledGenes; do echo $f1 && Rscript matrixOut.R $f1; done
+vi matrixOut.R 
+for f1 in *matrix_scaledGenes; do echo $f1 && Rscript matrixOut.R $f1; done
+ls
+ls visualOutput/
+vi matrixOut.R 
+ls visualOutput/
+for f1 in *matrix_scaledGenes; do echo $f1 && Rscript matrixOut.R $f1; done
+ls
+ls visualOutput/
+vi matrixOut.R 
+for f1 in *matrix_scaledGenes; do echo $f1 && Rscript matrixOut.R $f1; done
+ls
+ls -hal
+Rscript ck01_S1_L003_R2_001_hs2_matrix_scaledGenes
+vi matrixOut.R 
+Rscript ck01_S1_L003_R2_001_hs2_matrix_scaledGenes
+vi matrixOut.R 
+for f1 in *matrix_scaledGenes; do echo $f1 && Rscript matrixOut.R $f1; done
+ls
+exit
+ls
+cd /bgfs/ckaplan/Alex/NET_seq/
+ls
+head test.txt 
+htseq
+module load htseq
+htseq
+htseq-count
+htseq-count -help
+htseq-count --help
+mv Galaxy4-\[BED-to-GFF_on_data_3\].gff introns.gff
+htseq-count ck01_S1_L003_R1_001_UMI_sce.hs2.sam introns.gff 
+module load cufflinks
+gffread introns.gff -T -o introns.gt
+htseq-count ck01_S1_L003_R1_001_UMI_sce.hs2.sam introns.gtf 
+ls ~/
+ls /bgfs/ckaplan/Alex/NET_seq/
+ls
+mkdir data
+mv * data/
+ls
+ls data
+ls data/visualOutput/
+cd ..
+cd NET_seq/
+ls
+mkdir newData
+cd newData/
+cp /bgfs/ckaplan/Anand_seq/NET_seq/Hiseq/18314Kap_N19007/umi_trimmed/R2_cutadapt/* .
+ls
+srun -n 2 -t 3:00:00 --pty bash
+srun -n 2 -t 6:00:00 --pty bash
+exit
+ls
+r
+module load R
+module spider R
+module spider r
+module load r/3.6.0
+module spider r/3.6.0
+moduel load gcc/8.2.0
+module load gcc/8.2.0
+module load r/3.6.0
+r
+R
+cd Github/
+git pull
+git status
+ls
+cd ..
+ls
+cd /bgfs/ckaplan/Alex/NET_seq/
+ls
+cd data
+la
+ls
+cat Undetermined_S0_L003_R1_001_UMI_sce.hs2.txt 
+cat Undetermined_S0_L003_R1_001_UMI_spo.hs2.txt 
+conda activate ~/miniconda3/envs/rnaseq
+srun -n 1 -t 4:00:00 --pty bash
+ls
+exit
+ls
+cd /bgfs/ckaplan/Alex/NET_seq/newData/
+ls
+module load gcc/8.2.0
+srun -n 1 -t 1:00:00 --pty bash
+ls /bgfs/ckaplan/Alex/NET_seq/newData
+module load gcc/8.2.0
+module load r/3.6.0
+for f1 in *intons50; do echo $f1 && Rscript matrixOut.R $f1; done
+cd /bgfs/ckaplan/Alex/NET_seq/newData
+for f1 in *intons50; do echo $f1 && Rscript matrixOut.R $f1; done
+mkdir matrices
+mv *matrix* matrices/
+ls
+mv Galaxy7-\[UCSC_Main_on_S._cerevisiae__ncbiRefSeq_\(genome\)\].bed exons500.bed
+vi makeGraphIntrons50.sbatch 
+sbatch makeGraphIntrons50.sbatch 
+cat slurm-302268.out 
+sbatch makeGraphIntrons50.sbatch 
+scancel 302268
+scancel 302269
+rm slurm-302268.out 
+rm slurm-302269.out 
+cat slurm-302270.out 
+ls
+vi matrixOut.R
+for f1 in *exons500; do echo $f1 && Rscript matrixOut.R $f1; done
+vi matrixOut.R 
+for f1 in *exons500; do echo $f1 && Rscript matrixOut.R $f1; done
+vi matrixOut.R 
+for f1 in *exons500; do echo $f1 && Rscript matrixOut.R $f1; done
+ls
+vi matrixOut.R 
+for f1 in *exons500; do echo $f1 && Rscript matrixOut.R $f1; done
+ls
+vi makeGraphIntrons50.sbatch 
+sbatch makeGraphIntrons50.sbatch 
+cat slurm-302271.out 
+for f1 in *exons500; do echo $f1 && Rscript matrixOut.R $f1; done
+ls
+cat Undetermined_S0_L003_R2_001_hs2_stats.txt 
+cd ..
+cd data/
+ls
+module spider samtools
+ls
+vi sort_index.sbatch
+sbatch sort_index.sbatch 
+cat slurm-302273.out 
+exit
+ls /bgfs/ckaplan/Alex/NET_seq/newData
+exit
+cd /bgfs/ckaplan/Alex/NET_seq/newData
+vi matrixOut.R 
+ls
+module load gcc/8.2.0
+module load r/3.6.0
+for f1 in *matrix_50; do echo $f1 && Rscript matrixOut.R $f1; done
+exit
+cd /bgfs/ckaplan/Alex/NET_seq/dataa
+cd /bgfs/ckaplan/Alex/NET_seq/data
+ls
+cat slurm-302273.out 
+ls
+rm *slurm*
+ls
+cd ..
+cd newdata
+cd newData
+ls
+wc -l introns
+wc -l introns.bed
+ls
+grep + introns.bed > introns_plus.bed
+head introns_plus.bed 
+rm introns.bed 
+rm introns_plus.bed 
+pwd
+ls
+mv Galaxy8-\[UCSC_Main_on_S._cerevisiae__ensGene_\(genome\)\].bed introns.bed
+grep + introns.bed > introns_plus.bed
+grep - introns.bed > introns_minus.bed
+vi makeGraphIntrons50.sbatch 
+sbatch makeGraphIntronPlus.sbatch 
+sbatch makeGraphIntrons50.sbatch 
+scancel 302303
+scancel 302304
+module load bedtools
+module spider bedtools
+module spider bedtools/2.27.1
+module load gcc/8.2.0
+module load bedtools/2.27.1
+sortBed -sizeD introns_plus.bed 
+sortBed -sizeD -i introns_plus.bed 
+sortBed -sizeD -i introns_plus.bed > introns_plus1.bed
+sortBed -sizeD -i introns_minus.bed > introns_minus1.bed
+rm introns_minus.bed 
+mv introns_minus1.bed introns_minus.bed
+rm introns_plus.bed 
+mv introns_plus1.bed introns_plus.bed
+sbatch makeGraphIntronPlus.sbatch 
+sbatch makeGraphIntrons50.sbatch 
+car slurm-302306.out 
+cat slurm-302306.out 
+ls
+module load r/3.6.0
+for f1 in *_intron_*; do echo $f1 && Rscript matrixOut.R $f1; done
+for f1 in *_introns_*; do echo $f1 && Rscript matrixOut.R $f1; done
+ls
+ls ../data
+srun -n 1 -t 12:00:00 --pty bash
+srun -n 1 -t 3:00:00 --pty bash
+ls
+cd /bgfs/ckaplan/Alex/NET_seq/newData
+cat /bgfs/ckaplan/Anand_seq/Genomes/Sce/Saccharomyces_cerevisiae.R64-1-1.40.gtf 
+samtools view ck01_S1_L003_R2_001_hs2.sam | head
+module load gcc/8.2.0
+module load samtools/1.9
+samtools view ck01_S1_L003_R2_001_hs2.sam | head
+head /bgfs/ckaplan/Anand_seq/Genomes/Sce/Saccharomyces_cerevisiae.R64-1-1.40.gtf 
+awk 'BEGIN{FS=OFS=","}{$1="chr"$1}1' /bgfs/ckaplan/Anand_seq/Genomes/Sce/Saccharomyces_cerevisiae.R64-1-1.40.gtf > sce.gtf
+cat sce.gtf 
+module load htseq
+cd ..
+cd newData/
+htseq-count ck01_S1_L003_R2_001_hs2.sam sce.gtf 
+srun -n 1 -t 3:00:00 --pty bash
+cd /bgfs/ckaplan/Alex/NET_seq/newData/
+ls
+cd ../data
+ls
+ls counts
+module load gcc/8.2.0
+module load samtools/1.9
+cd ../newData/
+samtools idxstats ck01_S1_L003_R2_001_hs2.bam 
+samtools idxstats ck01_S1_L003_R2_001_hs2_sorted.bam
+srun -n 1 -t 4:00:00 --pty bash
+srun -n 1 -t 2:00:00 --pty bash
+ls
+ls allLys/
+ls
+ls bwa
+ls -hal bwa
+srun -n 1 -t 2:00:00 --pty bash
+cd /bgfs/ckaplan/Alex/NET_seq/newData/
+ls
+cat slurm-302930.out 
+ls
+cat slurm-302930.out 
+cd ../data
+ls
+cat slurm-302930.out 
+cd ../newData/
+cat slurm-302930.out 
+ls
+cat slurm-302930.out 
+cd /bgfs/ckaplan/Alex/NET_seq/newData/
+cat slurm-302930.out 
+ls ~/allLys/hisat2/
+ls
+cd ..
+cd newData
+ls
+cat ck01_S1_L003_R2_001_hs2_sce_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}'
+cat ck01_S1_L003_R2_001_hs2_spo_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}'
+cat ck03_S1_L003_R2_001_hs2_spo_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}'
+cd ~
+git clone git@github.com:dzerbino/velvet.git
+cd velvet/
+make
+./velvetg
+cd /bgfs/ckaplan/Alex/NET_seq/newData/
+head -n -5 ck01_S1_L003_R2_001_hs2_spo_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}'
+head -n -5 ck01_S1_L003_R2_001_hs2_sce_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}'
+head -n -5 ck03_S2_L003_R2_001_hs2_sce_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}' 
+head -n -5 ck03_S2_L003_R2_001_hs2_spo_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}' 
+head -n -5 ck05_S3_L003_R2_001_hs2_sce_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}' 
+head -n -5 ck05_S3_L003_R2_001_hs2_spo_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}' 
+head -n -5 ck07_S4_L003_R2_001_hs2_sce_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}' 
+head -n -5 ck07_S4_L003_R2_001_hs2_spo_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}' 
+head -n -5 ck09_S5_L003_R2_001_hs2_sce_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}' 
+head -n -5 ck09_S5_L003_R2_001_hs2_spo_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}' 
+head -n -5 ck11_S6_L003_R2_001_hs2_sce_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}' 
+head -n -5 ck11_S6_L003_R2_001_hs2_spo_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}' 
+head -n -5 ck13_S7_L003_R2_001_hs2_sce_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}' 
+head -n -5 ck13_S7_L003_R2_001_hs2_spo_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}' 
+head -n -5 ck15_S8_L003_R2_001_hs2_sce_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}' 
+head -n -5 ck15_S8_L003_R2_001_hs2_spo_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}' 
+head -n -5 Undetermined_S0_L003_R2_001_hs2_sce_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}' 
+head -n -5 Undetermined_S0_L003_R2_001_hs2_spo_counts.txt | cut -f2 | awk '{total += $0} END{print "sum="total}' 
+cd ~
+cd allLys/hisat2/
+ls
+srun -n 2 -t 12:00:00 --pty bash
+ls
+cd /bgfs/ckaplan/Alex/NET_seq/
+cd ..
+ls
+cd lys2/
+ls
+srun -n 1 -t 3:00:00 --pty bash
+samtools view lys2_aln.bam | awk '{print length($10)}' | head -100000 | sort -u
+module load gcc/8.2.0
+module load samtools/1.9
+samtools view lys2_aln.bam | awk '{print length($10)}' | head -100000 | sort -u
+samtools view lys2_aln.bam | awk '{print length($10)}' | head -1000 | sort -u
+samtools view file.bam | head -n 1000000 | cut -f 10 | perl -ne 'chomp;print length($_) . "\n"' | sort | uniq -c
+samtools view lys2_aln.bam | head -n 1000000 | cut -f 10 | perl -ne 'chomp;print length($_) . "\n"' | sort | uniq -c
+mkdir velvetOut27
+~/velvet/./velveth velvetOut27/ -bam -shortPaired lys2_disc_velvet.bam 
+~/velvet/./velveth velvetOut27/ 27 -bam -shortPaired lys2_disc_velvet.bam 
+~/velvet/velvetg 
+~/velvet/velvetg  velvetOut27/ -exp_conv auto -cuv_cutoff auto
+ls
+cd velvetOut
+ls
+cd ..
+cd velvetOut27/
+ls
+cd ..
+~/velvet/velvetg  velvetOut27/ -exp_conv auto -cuv_cutoff auto
+~/velvet/velvetg  velvetOut27/ -exp_cov auto -cuv_cutoff auto
+ls
+ls velvetOut27/
+~/velvet/velvetg  velvetOut27/ -exp_cov auto -cuv_cutoff auto
+~/velvet/velvetg  velvetOut27/ -exp_cov auto -cov_cutoff auto
+ls velvetOut27/
+ls
+ls velvetOut27/
+cd velvetOut27/
+cat contigs.fa 
+cat L
+cat Log 
+hisat2 -x /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/sce_index_2019/ht2_Budding_Fission -1 contigs.fa -f --no-unal -S velvet27.sam
+module load hisat2
+hisat2 -x /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/sce_index_2019/ht2_Budding_Fission -1 contigs.fa -f --no-unal -S velvet27.sam
+hisat2 -x /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/sce_index_2019/ht2_Budding_Fission -U contigs.fa -f --no-unal -S velvet27.sam
+samtools sort velvet27.sam 
+samtools sort -Sb velvet27.sam > velvet27.bam
+samtools view -Sb velvet27.sam > velvet27.bam
+samtools sort velvet27.bam > velvet27_sorted.bam
+samtools index velvet27
+samtools index velvet27_sorted.bam 
+ls ..
+ls
+cd ..
+ls
+mv Galaxy9-\[UCSC_Main_on_S._cerevisiae__gold_\(chrII_400\,000-500\,000\)\].fasta chrII.fa
+ls
+module load bedtools
+ls
+cd Github/
+git pull
+vi batchAnalysis.sbatch 
+cat /bgfs/ckaplan/Alex/NET_seq/newData/matrixOut.R 
+ls
+cd /bgfs/ckaplan/Alex/lys2/
+ls
+module load gcc/8.2.0
+module load samtools/1.9
+samtools view lys2_aln.sam | head

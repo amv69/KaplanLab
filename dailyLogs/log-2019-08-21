@@ -1,0 +1,686 @@
+Script started on Wed 21 Aug 2019 10:14:49 AM EDT
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ samtools view test.bam | awk '{print length($10)}' | head -1000 | sort -u[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@0[C[1@0[C[1P[1P[1P[1P[1P[1P[1P[1P[1@l[1@y[1@s[1@2[1@_[1@a[1@l[1@n. | awk '{print length($10)}' | head -100000 | sort -u M[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cb | awk '{print length($10)}' | head -100000 | sort -uuM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cam | awk '{print length($10)}' | head -100000 | sort -uM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+bash: samtools: command not found
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ modue[Kle load gcc/8.2.0
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ module load samtools/1.9
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ module load samtools/1.9[3Pgcc/8.2.0samtools view lys2_aln.bam | awk '{print length($10)}' | head -100000 | sort  -u
+37
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ samtools view lys2_aln.bam | awk '{print length($10)}' | head -100000 | sort  -uM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C | sort -[1PuM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C | sort -u[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+37
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ samtools view file.bam | head -n 1000000 | cut -f 10 | perl -ne 'chomp;print  length($_) . "\n"' | sort | uniq -c
+[E::hts_open_format] Failed to open file file.bam
+samtools view: failed to open "file.bam" for reading: No such file or directory
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ samtools view file.bam | head -n 1000000 | cut -f 10 | perl -ne 'chomp;print  length($_) . "\n"' | sort | uniq -cM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.bam | head -n 1000000 | cut -f 10 | perl -ne 'chomp;print l[1PM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.bam | head -n 1000000 | cut -f 10 | perl -ne 'chomp;print le[1PM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.bam | head -n 1000000 | cut -f 10 | perl -ne 'chomp;print len[1PM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.bam | head -n 1000000 | cut -f 10 | perl -ne 'chomp;print leng[1PM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl.bam | head -n 1000000 | cut -f 10 | perl -ne 'chomp;print len[1@gM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cy.bam | head -n 1000000 | cut -f 10 | perl -ne 'chomp;print le[1@nM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs.bam | head -n 1000000 | cut -f 10 | perl -ne 'chomp;print l[1@eM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2.bam | head -n 1000000 | cut -f 10 | perl -ne 'chomp;print [1@lM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_.bam | head -n 1000000 | cut -f 10 | perl -ne 'chomp;print[1@ M[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca.bam | head -n 1000000 | cut -f 10 | perl -ne 'chomp;prin[1@tM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl.bam | head -n 1000000 | cut -f 10 | perl -ne 'chomp;pri[1@nM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn.bam | head -n 1000000 | cut -f 10 | perl -ne 'chomp;pr[1@iM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+1000000 37
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ mkdir vev[KlvetOut28[K7
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ ~/velvet/./velveth velvetOut27/ -bam -shortPaire[K[K[Kired lys2_disc_ss[K[K[K
+lys2_disc.bam         lys2_disc.bam.bai     lys2_disc_velvet.bam  
+(base) [amv69@n440 lys2]$ ~/velvet/./velveth velvetOut27/ -bam -shortPaired lys2_disc_velvet.bam 
+[0.000000] Invalid hash length: -bam
+Usage:
+./velveth directory hash_length {[-file_format][-read_type][-separate|-interleaved] filename1 [filename2 ...]} {...} [options]
+
+	directory	: directory name for output files
+	hash_length	: EITHER an odd integer (if even, it will be decremented) <= 31 (if above, will be reduced)
+			: OR: m,M,s where m and M are odd integers (if not, they will be decremented) with m < M <= 31 (if above, will be reduced)
+				and s is a step (even number). Velvet will then hash from k=m to k=M with a step of s
+	filename	: path to sequence file or - for standard input
+
+File format options:
+	-fasta	-fastq	-raw	-fasta.gz	-fastq.gz	-raw.gz	-sam	-bam	-fmtAuto
+	(Note: -fmtAuto will detect fasta or fastq, and will try the following programs for decompression : gunzip, pbunzip2, bunzip2
+
+File layout options for paired reads (only for fasta and fastq formats):
+	-interleaved	: File contains paired reads interleaved in the one file (default)
+	-separate	: Read 2 separate files for paired reads
+
+Read type options:
+	-short	-shortPaired
+	-short2	-shortPaired2
+	-long	-longPaired
+	-reference
+
+Options:
+	-strand_specific	: for strand specific transcriptome sequencing data (default: off)
+	-reuse_Sequences	: reuse Sequences file (or link) already in directory (no need to provide original filenames in this case (default: off)
+	-reuse_binary	: reuse binary sequences file (or link) already in directory (no need to provide original filenames in this case (default: off)
+	-noHash			: simply prepare Sequences file, do not hash reads or prepare Roadmaps file (default: off)
+	-create_binary  	: create binary CnyUnifiedSeq file (default: off)
+
+Synopsis:
+
+- Short single end reads:
+	velveth Assem 29 -short -fastq s_1_sequence.txt
+
+- Paired-end short reads (remember to interleave paired reads):
+	velveth Assem 31 -shortPaired -fasta interleaved.fna
+
+- Paired-end short reads (using separate files for the paired reads)
+	velveth Assem 31 -shortPaired -fasta -separate left.fa right.fa
+
+- Two channels and some long reads:
+	velveth Assem 43 -short -fastq unmapped.fna -longPaired -fasta SangerReads.fasta
+
+- Three channels:
+	velveth Assem 35 -shortPaired -fasta pe_lib1.fasta -shortPaired2 pe_lib2.fasta -short3 se_lib1.fa
+
+Output:
+	directory/Roadmaps
+	directory/Sequences
+		[Both files are picked up by graph, so please leave them there]
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ ~/velvet/./velveth velvetOut27/ -bam -shortPaired lys2_disc_velvet.bam [1@2[1@7[1@ 
+[0.000000] Reading BAM file lys2_disc_velvet.bam
+[0.182041] 274 reads found.
+[0.182051] Done
+[0.183035] Reading read set file velvetOut27//Sequences;
+[0.183635] 274 sequences found
+[0.185154] Done
+[0.185176] 274 sequences in total.
+[0.185767] Writing into roadmap file velvetOut27//Roadmaps...
+[0.186259] Inputting sequences...
+[0.186265] Inputting sequence 0 / 274
+[0.211915]  === Sequences loaded in 0.025661 s
+[0.212557] Done inputting sequences
+[0.212566] Destroying splay table
+[0.212910] Splay table destroyed
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ 
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ ~/velvet/./velvetg  [K[K[K[K[K[K[K[K[K[K[Kvelvetg 
+velvetg - de Bruijn graph construction, error removal and repeat resolution
+Version 1.2.10
+Copyright 2007, 2008 Daniel Zerbino (zerbino@ebi.ac.uk)
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+Compilation settings:
+CATEGORIES = 2
+MAXKMERLENGTH = 31
+
+Usage:
+./velvetg directory [options]
+
+	directory			: working directory name
+
+Standard options:
+	-cov_cutoff <floating-point|auto>	: removal of low coverage nodes AFTER tour bus or allow the system to infer it
+		(default: no removal)
+	-ins_length <integer>		: expected distance between two paired end reads (default: no read pairing)
+	-read_trkg <yes|no>		: tracking of short read positions in assembly (default: no tracking)
+	-min_contig_lgth <integer>	: minimum contig length exported to contigs.fa file (default: hash length * 2)
+	-amos_file <yes|no>		: export assembly to AMOS file (default: no export)
+	-exp_cov <floating point|auto>	: expected coverage of unique regions or allow the system to infer it
+		(default: no long or paired-end read resolution)
+	-long_cov_cutoff <floating-point>: removal of nodes with low long-read coverage AFTER tour bus
+		(default: no removal)
+
+Advanced options:
+	-ins_length* <integer>		: expected distance between two paired-end reads in the respective short-read dataset (default: no read pairing)
+	-ins_length_long <integer>	: expected distance between two long paired-end reads (default: no read pairing)
+	-ins_length*_sd <integer>	: est. standard deviation of respective dataset (default: 10% of corresponding length)
+		[replace '*' by nothing, '2' or '_long' as necessary]
+	-scaffolding <yes|no>		: scaffolding of contigs used paired end information (default: on)
+	-max_branch_length <integer>	: maximum length in base pair of bubble (default: 100)
+	-max_divergence <floating-point>: maximum divergence rate between two branches in a bubble (default: 0.2)
+	-max_gap_count <integer>	: maximum number of gaps allowed in the alignment of the two branches of a bubble (default: 3)
+	-min_pair_count <integer>	: minimum number of paired end connections to justify the scaffolding of two long contigs (default: 5)
+	-max_coverage <floating point>	: removal of high coverage nodes AFTER tour bus (default: no removal)
+	-coverage_mask <int>	: minimum coverage required for confident regions of contigs (default: 1)
+	-long_mult_cutoff <int>		: minimum number of long reads required to merge contigs (default: 2)
+	-unused_reads <yes|no>		: export unused reads in UnusedReads.fa file (default: no)
+	-alignments <yes|no>		: export a summary of contig alignment to the reference sequences (default: no)
+	-exportFiltered <yes|no>	: export the long nodes which were eliminated by the coverage filters (default: no)
+	-clean <yes|no>			: remove all the intermediary files which are useless for recalculation (default : no)
+	-very_clean <yes|no>		: remove all the intermediary files (no recalculation possible) (default: no)
+	-paired_exp_fraction <double>	: remove all the paired end connections which less than the specified fraction of the expected count (default: 0.1)
+	-shortMatePaired* <yes|no>	: for mate-pair libraries, indicate that the library might be contaminated with paired-end reads (default no)
+	-conserveLong <yes|no>		: preserve sequences with long reads in them (default no)
+
+Output:
+	directory/contigs.fa		: fasta file of contigs longer than twice hash length
+	directory/stats.txt		: stats file (tab-spaced) useful for determining appropriate coverage cutoff
+	directory/LastGraph		: special formatted file with all the information on the final graph
+	directory/velvet_asm.afg	: (if requested) AMOS compatible assembly file
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ ~/velvet/velvetg  velvetOut27/ -exo[Kp_conv auto -cuv_cutoff auto
+[0.000000] Unknown option: -exp_conv;
+Usage:
+./velvetg directory [options]
+
+	directory			: working directory name
+
+Standard options:
+	-cov_cutoff <floating-point|auto>	: removal of low coverage nodes AFTER tour bus or allow the system to infer it
+		(default: no removal)
+	-ins_length <integer>		: expected distance between two paired end reads (default: no read pairing)
+	-read_trkg <yes|no>		: tracking of short read positions in assembly (default: no tracking)
+	-min_contig_lgth <integer>	: minimum contig length exported to contigs.fa file (default: hash length * 2)
+	-amos_file <yes|no>		: export assembly to AMOS file (default: no export)
+	-exp_cov <floating point|auto>	: expected coverage of unique regions or allow the system to infer it
+		(default: no long or paired-end read resolution)
+	-long_cov_cutoff <floating-point>: removal of nodes with low long-read coverage AFTER tour bus
+		(default: no removal)
+
+Advanced options:
+	-ins_length* <integer>		: expected distance between two paired-end reads in the respective short-read dataset (default: no read pairing)
+	-ins_length_long <integer>	: expected distance between two long paired-end reads (default: no read pairing)
+	-ins_length*_sd <integer>	: est. standard deviation of respective dataset (default: 10% of corresponding length)
+		[replace '*' by nothing, '2' or '_long' as necessary]
+	-scaffolding <yes|no>		: scaffolding of contigs used paired end information (default: on)
+	-max_branch_length <integer>	: maximum length in base pair of bubble (default: 100)
+	-max_divergence <floating-point>: maximum divergence rate between two branches in a bubble (default: 0.2)
+	-max_gap_count <integer>	: maximum number of gaps allowed in the alignment of the two branches of a bubble (default: 3)
+	-min_pair_count <integer>	: minimum number of paired end connections to justify the scaffolding of two long contigs (default: 5)
+	-max_coverage <floating point>	: removal of high coverage nodes AFTER tour bus (default: no removal)
+	-coverage_mask <int>	: minimum coverage required for confident regions of contigs (default: 1)
+	-long_mult_cutoff <int>		: minimum number of long reads required to merge contigs (default: 2)
+	-unused_reads <yes|no>		: export unused reads in UnusedReads.fa file (default: no)
+	-alignments <yes|no>		: export a summary of contig alignment to the reference sequences (default: no)
+	-exportFiltered <yes|no>	: export the long nodes which were eliminated by the coverage filters (default: no)
+	-clean <yes|no>			: remove all the intermediary files which are useless for recalculation (default : no)
+	-very_clean <yes|no>		: remove all the intermediary files (no recalculation possible) (default: no)
+	-paired_exp_fraction <double>	: remove all the paired end connections which less than the specified fraction of the expected count (default: 0.1)
+	-shortMatePaired* <yes|no>	: for mate-pair libraries, indicate that the library might be contaminated with paired-end reads (default no)
+	-conserveLong <yes|no>		: preserve sequences with long reads in them (default no)
+
+Output:
+	directory/contigs.fa		: fasta file of contigs longer than twice hash length
+	directory/stats.txt		: stats file (tab-spaced) useful for determining appropriate coverage cutoff
+	directory/LastGraph		: special formatted file with all the information on the final graph
+	directory/velvet_asm.afg	: (if requested) AMOS compatible assembly file
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ ls
+discordant.bam             lys2_aln.bam                lys2_aln_sorted_normal.bam.bai  [0m[38;5;27mvelvetOut[0m
+discordant_sorted.bam      lys2_aln.sam                lys2_disc.bam                   [38;5;27mvelvetOut27[0m
+discordant_sorted.bam.bai  lys2_aln_sorted.bam         lys2_disc.bam.bai
+header                     lys2_aln_sorted_normal.bam  lys2_disc_velvet.bam
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ cc[Kd velvetOut
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2/velvetOut\(base) [amv69@n440 velvetOut]$ ls
+contigs.fa  Graph2  LastGraph  Log  PreGraph  Roadmaps  Sequences  stats.txt
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2/velvetOut\(base) [amv69@n440 velvetOut]$ cd ..
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ cd velvetOut27/
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2/velvetOut27\(base) [amv69@n440 velvetOut27]$ ls
+Log  Roadmaps  Sequences
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2/velvetOut27\(base) [amv69@n440 velvetOut27]$ cd ,[K..
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ cd ..[3Plscd velvetOut27/..[K[3Plscd velvetOutls[K~/velvet/velvetg  velvetOut27/ -exp_conv auto -cuv_cutoff auto
+[0.000000] Unknown option: -exp_conv;
+Usage:
+./velvetg directory [options]
+
+	directory			: working directory name
+
+Standard options:
+	-cov_cutoff <floating-point|auto>	: removal of low coverage nodes AFTER tour bus or allow the system to infer it
+		(default: no removal)
+	-ins_length <integer>		: expected distance between two paired end reads (default: no read pairing)
+	-read_trkg <yes|no>		: tracking of short read positions in assembly (default: no tracking)
+	-min_contig_lgth <integer>	: minimum contig length exported to contigs.fa file (default: hash length * 2)
+	-amos_file <yes|no>		: export assembly to AMOS file (default: no export)
+	-exp_cov <floating point|auto>	: expected coverage of unique regions or allow the system to infer it
+		(default: no long or paired-end read resolution)
+	-long_cov_cutoff <floating-point>: removal of nodes with low long-read coverage AFTER tour bus
+		(default: no removal)
+
+Advanced options:
+	-ins_length* <integer>		: expected distance between two paired-end reads in the respective short-read dataset (default: no read pairing)
+	-ins_length_long <integer>	: expected distance between two long paired-end reads (default: no read pairing)
+	-ins_length*_sd <integer>	: est. standard deviation of respective dataset (default: 10% of corresponding length)
+		[replace '*' by nothing, '2' or '_long' as necessary]
+	-scaffolding <yes|no>		: scaffolding of contigs used paired end information (default: on)
+	-max_branch_length <integer>	: maximum length in base pair of bubble (default: 100)
+	-max_divergence <floating-point>: maximum divergence rate between two branches in a bubble (default: 0.2)
+	-max_gap_count <integer>	: maximum number of gaps allowed in the alignment of the two branches of a bubble (default: 3)
+	-min_pair_count <integer>	: minimum number of paired end connections to justify the scaffolding of two long contigs (default: 5)
+	-max_coverage <floating point>	: removal of high coverage nodes AFTER tour bus (default: no removal)
+	-coverage_mask <int>	: minimum coverage required for confident regions of contigs (default: 1)
+	-long_mult_cutoff <int>		: minimum number of long reads required to merge contigs (default: 2)
+	-unused_reads <yes|no>		: export unused reads in UnusedReads.fa file (default: no)
+	-alignments <yes|no>		: export a summary of contig alignment to the reference sequences (default: no)
+	-exportFiltered <yes|no>	: export the long nodes which were eliminated by the coverage filters (default: no)
+	-clean <yes|no>			: remove all the intermediary files which are useless for recalculation (default : no)
+	-very_clean <yes|no>		: remove all the intermediary files (no recalculation possible) (default: no)
+	-paired_exp_fraction <double>	: remove all the paired end connections which less than the specified fraction of the expected count (default: 0.1)
+	-shortMatePaired* <yes|no>	: for mate-pair libraries, indicate that the library might be contaminated with paired-end reads (default no)
+	-conserveLong <yes|no>		: preserve sequences with long reads in them (default no)
+
+Output:
+	directory/contigs.fa		: fasta file of contigs longer than twice hash length
+	directory/stats.txt		: stats file (tab-spaced) useful for determining appropriate coverage cutoff
+	directory/LastGraph		: special formatted file with all the information on the final graph
+	directory/velvet_asm.afg	: (if requested) AMOS compatible assembly file
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ ~/velvet/velvetg  velvetOut27/ -exp_conv auto -cuv_cutoff auto[C[1P
+[0.000000] Unknown option: -cuv_cutoff;
+Usage:
+./velvetg directory [options]
+
+	directory			: working directory name
+
+Standard options:
+	-cov_cutoff <floating-point|auto>	: removal of low coverage nodes AFTER tour bus or allow the system to infer it
+		(default: no removal)
+	-ins_length <integer>		: expected distance between two paired end reads (default: no read pairing)
+	-read_trkg <yes|no>		: tracking of short read positions in assembly (default: no tracking)
+	-min_contig_lgth <integer>	: minimum contig length exported to contigs.fa file (default: hash length * 2)
+	-amos_file <yes|no>		: export assembly to AMOS file (default: no export)
+	-exp_cov <floating point|auto>	: expected coverage of unique regions or allow the system to infer it
+		(default: no long or paired-end read resolution)
+	-long_cov_cutoff <floating-point>: removal of nodes with low long-read coverage AFTER tour bus
+		(default: no removal)
+
+Advanced options:
+	-ins_length* <integer>		: expected distance between two paired-end reads in the respective short-read dataset (default: no read pairing)
+	-ins_length_long <integer>	: expected distance between two long paired-end reads (default: no read pairing)
+	-ins_length*_sd <integer>	: est. standard deviation of respective dataset (default: 10% of corresponding length)
+		[replace '*' by nothing, '2' or '_long' as necessary]
+	-scaffolding <yes|no>		: scaffolding of contigs used paired end information (default: on)
+	-max_branch_length <integer>	: maximum length in base pair of bubble (default: 100)
+	-max_divergence <floating-point>: maximum divergence rate between two branches in a bubble (default: 0.2)
+	-max_gap_count <integer>	: maximum number of gaps allowed in the alignment of the two branches of a bubble (default: 3)
+	-min_pair_count <integer>	: minimum number of paired end connections to justify the scaffolding of two long contigs (default: 5)
+	-max_coverage <floating point>	: removal of high coverage nodes AFTER tour bus (default: no removal)
+	-coverage_mask <int>	: minimum coverage required for confident regions of contigs (default: 1)
+	-long_mult_cutoff <int>		: minimum number of long reads required to merge contigs (default: 2)
+	-unused_reads <yes|no>		: export unused reads in UnusedReads.fa file (default: no)
+	-alignments <yes|no>		: export a summary of contig alignment to the reference sequences (default: no)
+	-exportFiltered <yes|no>	: export the long nodes which were eliminated by the coverage filters (default: no)
+	-clean <yes|no>			: remove all the intermediary files which are useless for recalculation (default : no)
+	-very_clean <yes|no>		: remove all the intermediary files (no recalculation possible) (default: no)
+	-paired_exp_fraction <double>	: remove all the paired end connections which less than the specified fraction of the expected count (default: 0.1)
+	-shortMatePaired* <yes|no>	: for mate-pair libraries, indicate that the library might be contaminated with paired-end reads (default no)
+	-conserveLong <yes|no>		: preserve sequences with long reads in them (default no)
+
+Output:
+	directory/contigs.fa		: fasta file of contigs longer than twice hash length
+	directory/stats.txt		: stats file (tab-spaced) useful for determining appropriate coverage cutoff
+	directory/LastGraph		: special formatted file with all the information on the final graph
+	directory/velvet_asm.afg	: (if requested) AMOS compatible assembly file
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ ~/velvet/velvetg  velvetOut27/ -exp_cov auto -cuv_cutoff auto
+[0.000000] Unknown option: -cuv_cutoff;
+Usage:
+./velvetg directory [options]
+
+	directory			: working directory name
+
+Standard options:
+	-cov_cutoff <floating-point|auto>	: removal of low coverage nodes AFTER tour bus or allow the system to infer it
+		(default: no removal)
+	-ins_length <integer>		: expected distance between two paired end reads (default: no read pairing)
+	-read_trkg <yes|no>		: tracking of short read positions in assembly (default: no tracking)
+	-min_contig_lgth <integer>	: minimum contig length exported to contigs.fa file (default: hash length * 2)
+	-amos_file <yes|no>		: export assembly to AMOS file (default: no export)
+	-exp_cov <floating point|auto>	: expected coverage of unique regions or allow the system to infer it
+		(default: no long or paired-end read resolution)
+	-long_cov_cutoff <floating-point>: removal of nodes with low long-read coverage AFTER tour bus
+		(default: no removal)
+
+Advanced options:
+	-ins_length* <integer>		: expected distance between two paired-end reads in the respective short-read dataset (default: no read pairing)
+	-ins_length_long <integer>	: expected distance between two long paired-end reads (default: no read pairing)
+	-ins_length*_sd <integer>	: est. standard deviation of respective dataset (default: 10% of corresponding length)
+		[replace '*' by nothing, '2' or '_long' as necessary]
+	-scaffolding <yes|no>		: scaffolding of contigs used paired end information (default: on)
+	-max_branch_length <integer>	: maximum length in base pair of bubble (default: 100)
+	-max_divergence <floating-point>: maximum divergence rate between two branches in a bubble (default: 0.2)
+	-max_gap_count <integer>	: maximum number of gaps allowed in the alignment of the two branches of a bubble (default: 3)
+	-min_pair_count <integer>	: minimum number of paired end connections to justify the scaffolding of two long contigs (default: 5)
+	-max_coverage <floating point>	: removal of high coverage nodes AFTER tour bus (default: no removal)
+	-coverage_mask <int>	: minimum coverage required for confident regions of contigs (default: 1)
+	-long_mult_cutoff <int>		: minimum number of long reads required to merge contigs (default: 2)
+	-unused_reads <yes|no>		: export unused reads in UnusedReads.fa file (default: no)
+	-alignments <yes|no>		: export a summary of contig alignment to the reference sequences (default: no)
+	-exportFiltered <yes|no>	: export the long nodes which were eliminated by the coverage filters (default: no)
+	-clean <yes|no>			: remove all the intermediary files which are useless for recalculation (default : no)
+	-very_clean <yes|no>		: remove all the intermediary files (no recalculation possible) (default: no)
+	-paired_exp_fraction <double>	: remove all the paired end connections which less than the specified fraction of the expected count (default: 0.1)
+	-shortMatePaired* <yes|no>	: for mate-pair libraries, indicate that the library might be contaminated with paired-end reads (default no)
+	-conserveLong <yes|no>		: preserve sequences with long reads in them (default no)
+
+Output:
+	directory/contigs.fa		: fasta file of contigs longer than twice hash length
+	directory/stats.txt		: stats file (tab-spaced) useful for determining appropriate coverage cutoff
+	directory/LastGraph		: special formatted file with all the information on the final graph
+	directory/velvet_asm.afg	: (if requested) AMOS compatible assembly file
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ ls
+discordant.bam             lys2_aln.bam                lys2_aln_sorted_normal.bam.bai  [0m[38;5;27mvelvetOut[0m
+discordant_sorted.bam      lys2_aln.sam                lys2_disc.bam                   [38;5;27mvelvetOut27[0m
+discordant_sorted.bam.bai  lys2_aln_sorted.bam         lys2_disc.bam.bai
+header                     lys2_aln_sorted_normal.bam  lys2_disc_velvet.bam
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ ls c[Kvev[KlvetOutw2[K[K27/
+Log  Roadmaps  Sequences
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ ls velvetOut27/[K~/velvet/velvetg  velvetOut27/ -exp_cov auto -cuv_cutoff auto
+[0.000000] Unknown option: -cuv_cutoff;
+Usage:
+./velvetg directory [options]
+
+	directory			: working directory name
+
+Standard options:
+	-cov_cutoff <floating-point|auto>	: removal of low coverage nodes AFTER tour bus or allow the system to infer it
+		(default: no removal)
+	-ins_length <integer>		: expected distance between two paired end reads (default: no read pairing)
+	-read_trkg <yes|no>		: tracking of short read positions in assembly (default: no tracking)
+	-min_contig_lgth <integer>	: minimum contig length exported to contigs.fa file (default: hash length * 2)
+	-amos_file <yes|no>		: export assembly to AMOS file (default: no export)
+	-exp_cov <floating point|auto>	: expected coverage of unique regions or allow the system to infer it
+		(default: no long or paired-end read resolution)
+	-long_cov_cutoff <floating-point>: removal of nodes with low long-read coverage AFTER tour bus
+		(default: no removal)
+
+Advanced options:
+	-ins_length* <integer>		: expected distance between two paired-end reads in the respective short-read dataset (default: no read pairing)
+	-ins_length_long <integer>	: expected distance between two long paired-end reads (default: no read pairing)
+	-ins_length*_sd <integer>	: est. standard deviation of respective dataset (default: 10% of corresponding length)
+		[replace '*' by nothing, '2' or '_long' as necessary]
+	-scaffolding <yes|no>		: scaffolding of contigs used paired end information (default: on)
+	-max_branch_length <integer>	: maximum length in base pair of bubble (default: 100)
+	-max_divergence <floating-point>: maximum divergence rate between two branches in a bubble (default: 0.2)
+	-max_gap_count <integer>	: maximum number of gaps allowed in the alignment of the two branches of a bubble (default: 3)
+	-min_pair_count <integer>	: minimum number of paired end connections to justify the scaffolding of two long contigs (default: 5)
+	-max_coverage <floating point>	: removal of high coverage nodes AFTER tour bus (default: no removal)
+	-coverage_mask <int>	: minimum coverage required for confident regions of contigs (default: 1)
+	-long_mult_cutoff <int>		: minimum number of long reads required to merge contigs (default: 2)
+	-unused_reads <yes|no>		: export unused reads in UnusedReads.fa file (default: no)
+	-alignments <yes|no>		: export a summary of contig alignment to the reference sequences (default: no)
+	-exportFiltered <yes|no>	: export the long nodes which were eliminated by the coverage filters (default: no)
+	-clean <yes|no>			: remove all the intermediary files which are useless for recalculation (default : no)
+	-very_clean <yes|no>		: remove all the intermediary files (no recalculation possible) (default: no)
+	-paired_exp_fraction <double>	: remove all the paired end connections which less than the specified fraction of the expected count (default: 0.1)
+	-shortMatePaired* <yes|no>	: for mate-pair libraries, indicate that the library might be contaminated with paired-end reads (default no)
+	-conserveLong <yes|no>		: preserve sequences with long reads in them (default no)
+
+Output:
+	directory/contigs.fa		: fasta file of contigs longer than twice hash length
+	directory/stats.txt		: stats file (tab-spaced) useful for determining appropriate coverage cutoff
+	directory/LastGraph		: special formatted file with all the information on the final graph
+	directory/velvet_asm.afg	: (if requested) AMOS compatible assembly file
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ ~/velvet/velvetg  velvetOut27/ -exp_cov auto -cuv_cutoff auto[C[1P[1@o
+[0.000000] Reading roadmap file velvetOut27//Roadmaps
+[0.008792] 274 roadmaps read
+[0.009127] Creating insertion markers
+[0.009153] Ordering insertion markers
+[0.009237] Counting preNodes
+[0.009259] 264 preNodes counted, creating them now
+[0.033557] Adjusting marker info...
+[0.033575] Connecting preNodes
+[0.033670] Cleaning up memory
+[0.033674] Done creating preGraph
+[0.033678] Concatenation...
+[0.033747] Renumbering preNodes
+[0.033749] Initial preNode count 264
+[0.033756] Destroyed 247 preNodes
+[0.033758] Concatenation over!
+[0.033760] Clipping short tips off preGraph
+[0.033766] Concatenation...
+[0.033771] Renumbering preNodes
+[0.033773] Initial preNode count 17
+[0.033776] Destroyed 14 preNodes
+[0.033778] Concatenation over!
+[0.033780] 12 tips cut off
+[0.033782] 3 nodes left
+[0.034534] Writing into pregraph file velvetOut27//PreGraph...
+[0.036141] Reading read set file velvetOut27//Sequences;
+[0.036794] 274 sequences found
+[0.038973] Done
+[0.039445] Reading pre-graph file velvetOut27//PreGraph
+[0.039672] Graph has 3 nodes and 274 sequences
+[0.040291] Scanning pre-graph file velvetOut27//PreGraph for k-mers
+[0.040557] 366 kmers found
+[0.041668] Sorting kmer occurence table ... 
+[0.041886] Sorting done.
+[0.041890] Computing acceleration table... 
+[0.059378] Computing offsets... 
+[0.059419] Ghost Threading through reads 0 / 274
+[0.059680]  === Ghost-Threaded in 0.000261 s
+[0.059684] Threading through reads 0 / 274
+[0.059901]  === Threaded in 0.000217 s
+[0.060279] Correcting graph with cutoff 0.200000
+[0.060336] Determining eligible starting points
+[0.060364] Done listing starting nodes
+[0.060367] Initializing todo lists
+[0.060370] Done with initilization
+[0.060372] Activating arc lookup table
+[0.060374] Done activating arc lookup table
+[0.060379] Concatenation...
+[0.060381] Renumbering nodes
+[0.060383] Initial node count 3
+[0.060387] Removed 0 null nodes
+[0.060389] Concatenation over!
+[0.060393] Clipping short tips off graph, drastic
+[0.060396] Concatenation...
+[0.060398] Renumbering nodes
+[0.060400] Initial node count 3
+[0.060402] Removed 0 null nodes
+[0.060404] Concatenation over!
+[0.060406] 3 nodes left
+[0.061327] Writing into graph file velvetOut27//Graph2...
+[0.063247] Measuring median coverage depth...
+[0.063286] Median coverage depth = 7.005435
+[0.064260] Removing contigs with coverage < 3.502717...
+[0.064285] Concatenation...
+[0.064288] Renumbering nodes
+[0.064290] Initial node count 3
+[0.064293] Removed 1 null nodes
+[0.064295] Concatenation over!
+[0.064297] Concatenation...
+[0.064299] Renumbering nodes
+[0.064301] Initial node count 2
+[0.064303] Removed 0 null nodes
+[0.064305] Concatenation over!
+[0.064307] Clipping short tips off graph, drastic
+[0.064310] Concatenation...
+[0.064312] Renumbering nodes
+[0.064314] Initial node count 2
+[0.064316] Removed 0 null nodes
+[0.064318] Concatenation over!
+[0.064320] 2 nodes left
+[0.064322] Read coherency...
+[0.064325] Identifying unique nodes
+[0.064327] Done, 2 unique nodes counted
+[0.064329] Trimming read tips
+[0.064331] Renumbering nodes
+[0.064333] Initial node count 2
+[0.064335] Removed 0 null nodes
+[0.064337] Confronted to 0 multiple hits and 0 null over 0
+[0.064340] Read coherency over!
+[0.064348] Starting pebble resolution...
+[0.064356] Computing read to node mapping array sizes
+[0.064362] Computing read to node mappings
+[0.064366] Estimating library insert lengths...
+[0.064371] Done
+[0.064375] Computing direct node to node mappings
+[0.064378] Scaffolding node 0
+[0.064383]  === Nodes Scaffolded in 0.000006 s
+[0.064389] Preparing to correct graph with cutoff 0.200000
+[0.064419] Cleaning memory
+[0.064429] Deactivating local correction settings
+[0.064435] Pebble done.
+[0.064437] Concatenation...
+[0.064439] Renumbering nodes
+[0.064441] Initial node count 2
+[0.064444] Removed 0 null nodes
+[0.064446] Concatenation over!
+[0.064448] Removing reference contigs with coverage < 3.502717...
+[0.064452] Concatenation...
+[0.064454] Renumbering nodes
+[0.064456] Initial node count 2
+[0.064458] Removed 0 null nodes
+[0.064460] Concatenation over!
+[0.065004] Writing contigs into velvetOut27//contigs.fa...
+[0.081934] Writing into stats file velvetOut27//stats.txt...
+[0.083512] Writing into graph file velvetOut27//LastGraph...
+[0.084334] Estimated Coverage = 7.005435
+[0.084355] Estimated Coverage cutoff = 3.502717
+Final graph has 2 nodes and n50 of 184, max 184, total 292, using 179/274 reads
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ ls velvetOut27/
+contigs.fa  Graph2  LastGraph  Log  PreGraph  Roadmaps  Sequences  stats.txt
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ ls
+discordant.bam             lys2_aln.bam                lys2_aln_sorted_normal.bam.bai  [0m[38;5;27mvelvetOut[0m
+discordant_sorted.bam      lys2_aln.sam                lys2_disc.bam                   [38;5;27mvelvetOut27[0m
+discordant_sorted.bam.bai  lys2_aln_sorted.bam         lys2_disc.bam.bai
+header                     lys2_aln_sorted_normal.bam  lys2_disc_velvet.bam
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ ls velvetOut27/
+contigs.fa  Graph2  LastGraph  Log  PreGraph  Roadmaps  Sequences  stats.txt
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2\(base) [amv69@n440 lys2]$ c[Kcd velvetOut27/
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2/velvetOut27\(base) [amv69@n440 velvetOut27]$ cat contigs.fa 
+>NODE_1_length_184_cov_7.005435
+GGCAACTATGTTAGAAGTGCGGTTGATGTCGCGATAAGTGAAAGAACGGGACTTGTCGGA
+ATTTAGTGTTGGAGTCTCCACAACACAGGTTCTCTCTGGGAAGGCTTCAGCATTGTCCTG
+GAAAATGTCGTGAATACACCCCACGAAATCGCACCAGCCCAAGTTCTTAGTTGGATCAGG
+TAAACTATCCTTGGATGATGCGGTGCTCAg
+>NODE_2_length_108_cov_6.101852
+ATTCGTTACAGCTACCTCAGCTCGATGTGCCTCATGATAGTTTTTCTAACAAATACGCTG
+TCGCTTTGAGTGTATGGGCTGCATTGATATATAGAGTAACCGGTGACGATGATATTGTTC
+TTTATATTGCGAAt
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2/velvetOut27\(base) [amv69@n440 velvetOut27]$ cat lgo[K[K[KL
+cat: L: No such file or directory
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2/velvetOut27\(base) [amv69@n440 velvetOut27]$ cat Log 
+Wed Aug 21 10:26:36 2019
+ /ihome/ckaplan/amv69/velvet/./velveth velvetOut27/ 27 -bam -shortPaired lys2_disc_velvet.bam
+Version 1.2.10
+Copyright 2007, 2008 Daniel Zerbino (zerbino@ebi.ac.uk)
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+Compilation settings:
+CATEGORIES = 2
+MAXKMERLENGTH = 31
+
+Wed Aug 21 10:28:37 2019
+ /ihome/ckaplan/amv69/velvet/velvetg velvetOut27/ -exp_cov auto -cov_cutoff auto
+Version 1.2.10
+Copyright 2007, 2008 Daniel Zerbino (zerbino@ebi.ac.uk)
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+Compilation settings:
+CATEGORIES = 2
+MAXKMERLENGTH = 31
+
+Median coverage depth = 7.005435
+Final graph has 2 nodes and n50 of 184, max 184, total 292, using 179/274 reads
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2/velvetOut27\(base) [amv69@n440 velvetOut27]$ hisat2 -x /hisat[K[K[K[K[Kbgfs/ckaplan/Anand_seq/Genomes/Sce/HIS[K[K[KIND[K[K[K[K[K[K[KINDEX_HISAT2/sce_index_2019//Bu[K[K
+ht2_Budding_Fission.1.ht2             ht2_Budding_Fission.7.ht2
+ht2_Budding_Fission.2.ht2             ht2_Budding_Fission.8.ht2
+ht2_Budding_Fission.3.ht2             ht2_Budding_Fission_index_092618.txt
+ht2_Budding_Fission.4.ht2             ht2_Budding_Fission_index_sce.txt
+ht2_Budding_Fission.5.ht2             R64-1-1_chr_exons.txt
+ht2_Budding_Fission.6.ht2             R64-1-1_chr_splicesites.txt
+(base) [amv69@n440 velvetOut27]$ hisat2 -x /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/sce_index_2019//ht2B[K_Budding_Fission -1 contigs.fa -f --no-unal -S velvet27.sam
+bash: hisat2: command not found
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2/velvetOut27\(base) [amv69@n440 velvetOut27]$ module load hisat2
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2/velvetOut27\(base) [amv69@n440 velvetOut27]$ module load hisat2hisat2 -x /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/sce_index_2019//ht2_Budding_Fission -1 contigs.fa -f --no-unal -S velvet27.sam
+HISAT2 version 2.1.0 by Daehwan Kim (infphilo@gmail.com, www.ccb.jhu.edu/people/infphilo)
+Usage: 
+  hisat2 [options]* -x <ht2-idx> {-1 <m1> -2 <m2> | -U <r> | --sra-acc <SRA accession number>} [-S <sam>]
+
+  <ht2-idx>  Index filename prefix (minus trailing .X.ht2).
+  <m1>       Files with #1 mates, paired with files in <m2>.
+             Could be gzip'ed (extension: .gz) or bzip2'ed (extension: .bz2).
+  <m2>       Files with #2 mates, paired with files in <m1>.
+             Could be gzip'ed (extension: .gz) or bzip2'ed (extension: .bz2).
+  <r>        Files with unpaired reads.
+             Could be gzip'ed (extension: .gz) or bzip2'ed (extension: .bz2).
+  <SRA accession number>        Comma-separated list of SRA accession numbers, e.g. --sra-acc SRR353653,SRR353654.
+  <sam>      File for SAM output (default: stdout)
+
+  <m1>, <m2>, <r> can be comma-separated lists (no whitespace) and can be
+  specified many times.  E.g. '-U file1.fq,file2.fq -U file3.fq'.
+
+Options (defaults in parentheses):
+
+ Input:
+  -q                 query input files are FASTQ .fq/.fastq (default)
+  --qseq             query input files are in Illumina's qseq format
+  -f                 query input files are (multi-)FASTA .fa/.mfa
+  -r                 query input files are raw one-sequence-per-line
+  -c                 <m1>, <m2>, <r> are sequences themselves, not files
+  -s/--skip <int>    skip the first <int> reads/pairs in the input (none)
+  -u/--upto <int>    stop after first <int> reads/pairs (no limit)
+  -5/--trim5 <int>   trim <int> bases from 5'/left end of reads (0)
+  -3/--trim3 <int>   trim <int> bases from 3'/right end of reads (0)
+  --phred33          qualities are Phred+33 (default)
+  --phred64          qualities are Phred+64
+  --int-quals        qualities encoded as space-delimited integers
+  --sra-acc          SRA accession ID
+
+ Alignment:
+  --n-ceil <func>    func for max # non-A/C/G/Ts permitted in aln (L,0,0.15)
+  --ignore-quals     treat all quality values as 30 on Phred scale (off)
+  --nofw             do not align forward (original) version of read (off)
+  --norc             do not align reverse-complement version of read (off)
+
+ Spliced Alignment:
+  --pen-cansplice <int>              penalty for a canonical splice site (0)
+  --pen-noncansplice <int>           penalty for a non-canonical splice site (12)
+  --pen-canintronlen <func>          penalty for long introns (G,-8,1) with canonical splice sites
+  --pen-noncanintronlen <func>       penalty for long introns (G,-8,1) with noncanonical splice sites
+  --min-intronlen <int>              minimum intron length (20)
+  --max-intronlen <int>              maximum intron length (500000)
+  --known-splicesite-infile <path>   provide a list of known splice sites
+  --novel-splicesite-outfile <path>  report a list of splice sites
+  --novel-splicesite-infile <path>   provide a list of novel splice sites
+  --no-temp-splicesite               disable the use of splice sites found
+  --no-spliced-alignment             disable spliced alignment
+  --rna-strandness <string>          specify strand-specific information (unstranded)
+  --tmo                              reports only those alignments within known transcriptome
+  --dta                              reports alignments tailored for transcript assemblers
+  --dta-cufflinks                    reports alignments tailored specifically for cufflinks
+  --avoid-pseudogene                 tries to avoid aligning reads to pseudogenes (experimental option)
+  --no-templatelen-adjustment        disables template length adjustment for RNA-seq reads
+
+ Scoring:
+  --mp <int>,<int>   max and min penalties for mismatch; lower qual = lower penalty <6,2>
+  --sp <int>,<int>   max and min penalties for soft-clipping; lower qual = lower penalty <2,1>
+  --no-softclip      no soft-clipping
+  --np <int>         penalty for non-A/C/G/Ts in read/ref (1)
+  --rdg <int>,<int>  read gap open, extend penalties (5,3)
+  --rfg <int>,<int>  reference gap open, extend penalties (5,3)
+  --score-min <func> min acceptable alignment score w/r/t read length
+                     (L,0.0,-0.2)
+
+ Reporting:
+  -k <int> (default: 5) report up to <int> alns per read
+
+ Paired-end:
+  -I/--minins <int>  minimum fragment length (0), only valid with --no-spliced-alignment
+  -X/--maxins <int>  maximum fragment length (500), only valid with --no-spliced-alignment
+  --fr/--rf/--ff     -1, -2 mates align fw/rev, rev/fw, fw/fw (--fr)
+  --no-mixed         suppress unpaired alignments for paired reads
+  --no-discordant    suppress discordant alignments for paired reads
+
+ Output:
+  -t/--time          print wall-clock time taken by search phases
+  --un <path>           write unpaired reads that didn't align to <path>
+  --al <path>           write unpaired reads that aligned at least once to <path>
+  --un-conc <path>      write pairs that didn't align concordantly to <path>
+  --al-conc <path>      write pairs that aligned concordantly at least once to <path>
+  (Note: for --un, --al, --un-conc, or --al-conc, add '-gz' to the option name, e.g.
+  --un-gz <path>, to gzip compress output, or add '-bz2' to bzip2 compress output.)
+  --summary-file     print alignment summary to this file.
+  --new-summary      print alignment summary in a new style, which is more machine-friendly.
+  --quiet            print nothing to stderr except serious errors
+  --met-file <path>  send metrics to file at <path> (off)
+  --met-stderr       send metrics to stderr (off)
+  --met <int>        report internal counters & metrics every <int> secs (1)
+  --no-head          supppress header lines, i.e. lines starting with @
+  --no-sq            supppress @SQ header lines
+  --rg-id <text>     set read group id, reflected in @RG line and RG:Z: opt field
+  --rg <text>        add <text> ("lab:value") to @RG line of SAM header.
+                     Note: @RG line only printed when --rg-id is set.
+  --omit-sec-seq     put '*' in SEQ and QUAL fields for secondary alignments.
+
+ Performance:
+  -o/--offrate <int> override offrate of index; must be >= index's offrate
+  -p/--threads <int> number of alignment threads to launch (1)
+  --reorder          force SAM output order to match order of input reads
+  --mm               use memory-mapped I/O for index; many 'hisat2's can share
+
+ Other:
+  --qc-filter        filter out reads that are bad according to QSEQ filter
+  --seed <int>       seed for random number generator (0)
+  --non-deterministic seed rand. gen. arbitrarily instead of using read attributes
+  --remove-chrname   remove 'chr' from reference names in alignment
+  --add-chrname      add 'chr' to reference names in alignment 
+  --version          print version information and quit
+  -h/--help          print this usage message
+***
+Error: Must specify at least one read input with -U/-1/-2/--sra-acc
+(ERR): hisat2-align exited with value 1
+kamv69@login0b:/bgfs/ckaplan/Alex/lys2/velvetOut27\(base) [amv69@n440 velvetOut27]$ hisat2 -x /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/sce_index_2019//ht2_Budding_Fission -1 contigs.fa -f --no-unal -S velvet27.samMmodule load hisat2[K
+[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chisat2 -x /bgfs/ckaplan/Anand_seq/Genomes/INDEX_HISAT2/sce_index_2019//ht2_Budding_Fission -1 contig
