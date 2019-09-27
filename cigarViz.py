@@ -58,6 +58,6 @@ plt2.show()
 #Skips
 plt3.hist(skips, binArray)
 plt3.title("skips")
-plt3.xlabel("# of Reads In Skip")
+plt3.xlabel("# of Bases")
 plt3.ylabel("Total # of Reads")
 plt3.show()
