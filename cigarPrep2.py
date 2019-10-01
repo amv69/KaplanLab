@@ -27,9 +27,9 @@ for fname in os.listdir(dir):
         for line in bedData:
             if line[0] == site[0]:
                 #Plus Strand
-                #diff = int(line[1]) - int(site[1])
+                diff = int(line[1]) - int(site[1])
                 #Minus strand
-                diff = int(site[1]) - int(line[1])
+                #diff = int(site[1]) - int(line[1])
                 if -50 < diff < 100:
                     diffs.append((diff))
                     #diffs.append((site[0],site[1],diff)) Used for old Graphing Code
@@ -37,15 +37,16 @@ for fname in os.listdir(dir):
                 pass
 
         out = np.array(diffs) #All of the graphing code, self explanatory
-        graph = sns.distplot(out, kde=False, bins=np.arange(-5, 100)-0.5) #-0.5 Centers data on the x axis
-        graph.set(xlabel='# of Bases', ylabel="# of Reads", title= "3' Pileup Relative to " + str(site[0]) + " " + str(site[1]))
-        plt.savefig("/Users/Alex/Desktop/intronsMinus/graphsSKIPS/" + str(fname)[:-4] + str(site[0]) + str(site[1]))
-        with open('/Users/Alex/Desktop/cigarsMinusSKIPS.txt', 'a+') as f:
+        #graph = sns.distplot(out, kde=False, bins=np.arange(-5, 100)-0.5) #-0.5 Centers data on the x axis
+        #graph.set(xlabel='# of Bases', ylabel="# of Reads", title= "3' Pileup Relative to " + str(site[0]) + " " + str(site[1]))
+        #plt.savefig("/Users/Alex/Desktop/" + str(fname)[:-4] + str(site[0]) + str(site[1]))
+        with open('/Users/Alex/Desktop/cigarsNew.txt', 'a+') as f:
             f.write(fname + " " + str(site[0]) + " " + str(site[1]))
-            f.write(str(out) + "\n")
+            f.write(str(diffs))
+            f.write("\n")
         out = []
         diffs = []
-        plt.clf()
+        #plt.clf()
 
 #        diffs2 = []
 #        fname2 = re.sub('_R1_sce_', '_SKIPS_sce_', fname)
