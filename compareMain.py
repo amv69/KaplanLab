@@ -3,8 +3,11 @@ import sys
 import os
 import subprocess
 
-dir = sys.argv[1]
-fasta = sys.argv[2]
+pyCode = sys.argv[1]
+dir = sys.argv[2]
+fasta = sys.argv[3]
 
 for fname in os.listdir(dir):
-    subprocess.Popen("python3 ~/Documents/Github/KaplanLab/compare2.py " + fname + " " + fasta, shell=True)
+    cmd = "python3 " + pyCode + " " + fname + " " + fasta
+    subprocess.Popen(cmd, shell=True)
+    print("Started: " + cmd)
