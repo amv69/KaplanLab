@@ -3,9 +3,9 @@
 ## Scripts used for Analysis 
 ### RNA_Seq
 This folder contains information related to RNA-seq
-###NETseq
+### NETseq
 This folder contains information related to NET-seq
-###Scripts
+### Scripts
 This folder contains random scripts I've written for analysis
 
 ### Daily Logs
