@@ -1,0 +1,9 @@
+myls
+Traceback (most recent call last):
+  File "/ihome/ckaplan/amv69/Github/compare3.py", line 15, in <module>
+    with gzip.open(fname) as f:
+  File "/ihome/ckaplan/amv69/miniconda3/envs/rnaseq/lib/python3.6/gzip.py", line 53, in open
+    binary_file = GzipFile(filename, gz_mode, compresslevel)
+  File "/ihome/ckaplan/amv69/miniconda3/envs/rnaseq/lib/python3.6/gzip.py", line 163, in __init__
+    fileobj = self.myfileobj = builtins.open(filename, mode or 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'myls'
