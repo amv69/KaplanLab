@@ -23,8 +23,9 @@ with gzip.open(fname) as f:
                 #subprocess.call(gsed -n '2~4p' , shell=True)
                 cmd = "grep -i -B 1 " + str(read).strip('\'').strip('b\'').strip('\\n') + " " + fasta + " | head -1 >> " + outFile
                 subprocess.call(cmd, shell=True)
-            elif read not in fastaReads:
+            else:
                 out.write(read)
         subprocess.call("uniq -u " + outFile + "> uniq_" + outFile, shell=True)
         subprocess.call("sed '2~2d' " + fasta + "> names_" + fasta, shell=True)
         subprocess.call("diff names_" + fasta + "uniq_" + outFile + "> " + missFile)
+        out.close()
