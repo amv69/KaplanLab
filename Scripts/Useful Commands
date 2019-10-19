@@ -1,0 +1,61 @@
+
+##TO GET INDIVIDUAL FILES FOR EACH BED ENTRY
+count=1;
+while read p;
+do
+  sed "$count q;d" introns_50bp_5p.bed > 5p/"$count".txt &&
+  (( count++ ));
+done < introns_50bp_5p.bed
+
+cd 5p
+
+for f1 in *.txt;
+do
+  name=$(cut -f4 $f1);
+  mv $f1 "$name"_5p.bed;
+done
+
+/bgfs/ckaplan/Alex/Introns/5p/*
+/bgfs/ckaplan/Alex/Introns/3p/*
+
+#Get all Reads with a certain barcode from all fq FILES
+while read barcode;
+do
+  echo $barcode;
+  for f in *.fastq;
+  do
+    fname=$(basename $f)
+    echo $f;
+    grep -B 1 -A 2 '^'$barcode $f >> $fname"_"$barcode".fastq";
+  done
+done < barcodes.txt
+
+#Reversing strandedness
+
+#!/bin/bash
+#
+#SBATCH --job-name=cut_and_align
+#SBATCH -n 1
+#SBATCH -t 1-00:00
+
+source /ihome/ckaplan/amv69/.bashrc
+source activate /ihome/ckaplan/amv69/miniconda3/envs/rnaseq
+
+for f1 in *sorted.bam;
+do
+  echo $f1;
+  samtools view -f 0x40 $f1 -o ${f1/sorted/R1};
+done
+
+for f1 in *R1.bam;
+do
+  echo $f1;
+  bamtobed -i -split -cigar -i $f1 -o ${f1/bam/bed};
+done
+
+for f1 in *R1.bed;
+do
+  echo $f1;
+  echo $f1 | tr " - " " + " > ${f1/.bed/_new_fs.bed};
+  echo $f1 | tr " + " " - " > ${f1/.bed/_new_rs.bed};
+done
