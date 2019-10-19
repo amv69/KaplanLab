@@ -14,3 +14,12 @@ if (length(args)==0) {
     #pheatmap(m, cluster_rows=F, cluster_cols=F) #For testing
     write.table(m, toString(args[1]) + "_matrix.txt", sep="\t")
 }
+
+
+
+filenames <- list.files("~/bbTest/", pattern="*total.txt", full.names=TRUE)
+ldf <- lapply(filenames, read.table)
+res <-lapply(ldf, as.data.frame)
+for(i in 1:length(res))
+  myPlot <- ggplot(res[[i]], aes(x=V1)) + geom_histogram(binwidth = 10)
+  ggsave(filename=paste("~/plot", i, ".png"), plot=myPlot)
